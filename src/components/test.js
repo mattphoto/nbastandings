@@ -14,9 +14,6 @@ import LAL from '../assets/LAL.svg'
 import DAL from '../assets/DAL.svg'
 import SAC from '../assets/SAC.svg'
 
-export const trest = () => {
-	return 'yoo'
-};
 
 export const teamAssets = {
 

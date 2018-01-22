@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
-const mainContainerWidth = 1200;
-const gamesBackRowFactor = 2;
-export const gamesBackRowHeight = 28;
+import {
+  mainContainerWidth,
+  gamesBackRowFactor,
+  gamesBackRowHeight,
+} from './constants';
+
 
 const teamTitleWidth = (mainContainerWidth - 84) / 4
 
@@ -11,6 +14,7 @@ export const StandingsContainer = styled.div`
   width: ${mainContainerWidth}px;
   margin 0 auto;
   border: 1px solid #EEE;
+  margin-bottom: ${gamesBackRowHeight}px;
 `
 
 export const GamesBackRow = styled.div`
@@ -58,7 +62,9 @@ export const ConferenceHeader = styled.div`
   background: #888;
   margin-bottom: 4px;
 `
+// C8102E
 
+// 1D42BA
 
 // myArray.slice(0).reverse().map(function(...
 
