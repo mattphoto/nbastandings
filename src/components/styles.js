@@ -13,7 +13,7 @@ export const StandingsContainer = styled.div`
   position: relative;
   width: ${mainContainerWidth}px;
   margin 0 auto;
-  border: 1px solid #EEE;
+  border: 1px solid #DDD;
   margin-bottom: ${gamesBackRowHeight}px;
 `
 
@@ -45,7 +45,6 @@ export const TeamTile = styled.div`
   z-index: ${props => props.z};
   box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.5);
   border-left: 6px solid ${props => props.secondaryColor};
-
 `
 
 export const ConferenceHeader = styled.div`
@@ -59,7 +58,7 @@ export const ConferenceHeader = styled.div`
   text-transform: uppercase;
   margin 0 auto;
   color: #FFF;
-  background: #888;
+  background: ${props => props.confBGColor};
   margin-bottom: 4px;
 `
 // C8102E

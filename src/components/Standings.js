@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { teamAssets } from './test';
 
 import { GamesBackRows } from './GamesBackRows';
 
@@ -7,7 +6,6 @@ import {
   TeamTile,
   StandingsContainer
 } from './styles';
-
 
 import {
   gamesBackRowFactor,
@@ -34,16 +32,11 @@ export class Standings extends Component {
     const numberOfGamesBackRows = 
     conferenceData.length 
       ? Math.floor(conferenceData[conferenceData.length-1].gamesBack) + gamesBackRowFactor + 1
-      : 1;
-
-    console.log('data state', this.state.dataArr, this.state.data)
+      : 23;
 
     return (
       <StandingsContainer >
-
         <GamesBackRows numberOfGamesBackRows={numberOfGamesBackRows}/>
-
-
         { conferenceData.map( (team, index) => 
           (
           <TeamTile 
@@ -66,7 +59,6 @@ export class Standings extends Component {
           </TeamTile>
           )
         )}
-
       </StandingsContainer>
     )
 

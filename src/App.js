@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import NBA from 'nba';
 
-import { teamAssets } from './components/test';
 import { Standings } from './components/Standings';
 
 import {
@@ -45,25 +44,25 @@ class App extends Component {
   }
 
   render() {
+    console.log('confs', this.state.dataWest, this.state.dataEast)
 
+    const { dataWest, dataEast } = this.state;
 
     return (
       <div>
-        <ConferenceHeader>
+        <ConferenceHeader confBGColor="#1D42BA">
           2017 &ndash; 2018 NBA Western Conference Standings
         </ConferenceHeader>
         <Standings 
-          conferenceData={ this.state.dataWest }
+          conferenceData={ dataWest }
         />
-        <ConferenceHeader>
+        <ConferenceHeader confBGColor="#C8102E">
           2017 &ndash; 2018 NBA Eastern Conference Standings
         </ConferenceHeader>
         <Standings 
-          conferenceData={ this.state.dataEast }
+          conferenceData={ dataEast }
         />
-
       </div>
-
     );
   }
 }

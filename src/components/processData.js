@@ -1,7 +1,8 @@
-import { teamAssets } from './test';
+import { teamAssets } from './teamAssets';
 
 import {
   gamesBackRowHeight,
+  gamesBackRowFactor,
   leftMargin,
   leftPositionIncrement,
 } from './constants';
@@ -31,9 +32,11 @@ export default function ( data, conf ) {
 
     if ( (filteredData[i][37] - lastGamesBackRow >= 3)
       ||
-      ( (filteredData[i][37] - lastGamesBackRow >= 2) 
+      ( (filteredData[i][37] - lastGamesBackRow >= gamesBackRowFactor) 
         && ( currentLeftPosition === leftMargin  ) )
-      ) 
+      ||
+      ( currentLeftPosition > leftPositionIncrement * 3  ) )
+      
     {
       currentLeftPosition = leftMargin;
       lastGamesBackRow = filteredData[i][37]
