@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { GamesBackRows } from './GamesBackRows';
+import { PlayoffsBracket } from './PlayoffsBracket';
 
 import {
   TeamTile,
@@ -55,17 +56,13 @@ export class Standings extends Component {
             />
 
             <span style={{ color: "rgba(255,255,255,.8" }}>{ team.assets[0] }</span> &nbsp;
-            <span style={{ fontFamily: "Inconsolata" }}>{ team.record }</span>
+            <span style={{ fontFamily: "Inconsolata", fontWeight: "700" }}>{ team.record }</span>
           </TeamTile>
           )
         )}
+        <PlayoffsBracket conferenceData={conferenceData}/>
       </StandingsContainer>
     )
-
-
-
-
-
 
   }
 }

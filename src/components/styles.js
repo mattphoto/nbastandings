@@ -4,11 +4,69 @@ import {
   mainContainerWidth,
   gamesBackRowFactor,
   gamesBackRowHeight,
+  leftMargin,
 } from './constants';
-
 
 const teamTitleWidth = (mainContainerWidth - 84) / 4
 
+export const PlayoffTeamsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+export const PlayoffTeams = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const PlayoffHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: ${gamesBackRowHeight}px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #FFF;
+  background: #999;
+  margin-bottom: 10px;
+`
+export const PlayoffTeamRank = styled.div`
+  font-weight: 
+    ${props => props.rank < 5 ? 600 : 400 };
+  display: flex;
+  align-items: center;
+  padding: 4px;
+`
+export const PlayoffTeamRecord = styled.div`
+  font-family: 'Inconsolata'; 
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: auto;
+`
+export const PlayoffTeamTileStyle = styled.div`
+  display: flex;
+  align-items: center;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  border: 1px solid #CCC;
+  padding: 0 10px 0 4px;
+  width: 130px;
+  background: #FFF;
+  margin-bottom: ${props => props.rank < 5 ? 1 : 8 }px;
+`
+export const PlayoffBracketContainer = styled.div`
+  position: absolute;
+  top: ${gamesBackRowHeight / 2}px;
+  right: ${leftMargin + 6}px;
+  width: 310px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  z-index: 0;
+  padding: 12px 12px 4px 12px;
+  background: #F1F1F1;
+  border: 1px solid #CCC;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.5);
+`
 export const StandingsContainer = styled.div`
   position: relative;
   width: ${mainContainerWidth}px;
@@ -16,7 +74,6 @@ export const StandingsContainer = styled.div`
   border: 1px solid #DDD;
   margin-bottom: ${gamesBackRowHeight}px;
 `
-
 export const GamesBackRow = styled.div`
   display: flex;
   align-items: center;
@@ -25,10 +82,9 @@ export const GamesBackRow = styled.div`
   background-image: linear-gradient(180deg, #EEE 20%, #fff 100%);
   height: ${gamesBackRowHeight}px;
   font-size: 18px;  
-  font-weight: 900;
+  font-weight: 800;
   padding: 0 10px;
 `
-
 export const TeamTile = styled.div`
   position: absolute;
   top: ${props => props.top}px;
@@ -39,22 +95,21 @@ export const TeamTile = styled.div`
   height: ${gamesBackRowHeight * gamesBackRowFactor}px;
   width: ${teamTitleWidth}px;
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 800;
   color: #FFF;
   padding: 0 10px;
   z-index: ${props => props.z};
   box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.5);
   border-left: 6px solid ${props => props.secondaryColor};
 `
-
 export const ConferenceHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: ${mainContainerWidth}px;
   height: ${gamesBackRowHeight * 1.2 }px;
-  font-size: 18px;  xw
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
   margin 0 auto;
   color: #FFF;
