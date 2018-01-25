@@ -44,7 +44,7 @@ class App extends Component {
   }
 
   render() {
-    console.log('confs', this.state.dataWest, this.state.dataEast)
+    console.log('confs', this.state.data, this.state.dataEast)
 
     const { dataWest, dataEast } = this.state;
 

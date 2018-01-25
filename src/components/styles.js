@@ -97,7 +97,7 @@ export const TeamTile = styled.div`
   font-size: 30px;
   font-weight: 800;
   color: #FFF;
-  padding: 0 10px;
+  padding: 4px 4px 4px 10px;
   z-index: ${props => props.z};
   box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.5);
   border-left: 6px solid ${props => props.secondaryColor};
@@ -111,38 +111,38 @@ export const ConferenceHeader = styled.div`
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  margin 0 auto;
+  margin: 0 auto;
   color: #FFF;
   background: ${props => props.confBGColor};
   margin-bottom: 4px;
 `
-// C8102E
+export const StreaksContainer = styled.div`
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: ${props => props.direction};
+  height: 50px;
+  width: 30px;
+  margin-left: auto;
+`
+export const StreakDot = styled.div`
+  height: 10px;
+  width: 10px;
+  border-radius: 2px;
+  background: 
+    ${props => (props.streak > 0) ? `rgba(0,100,0,.7)` : `rgba(139,0,0,.7)` };
+  border: 1px solid rgba(255,255,255,.5);
 
-// 1D42BA
+`
 
-// myArray.slice(0).reverse().map(function(...
+// .reverse().map(function(...
 
-
-
-
-        // { test.filter((team) => {
-        //     return team[5] === 'West';
-        //   })
-        //   .map( (team) => 
-        //   (
-        //   <TeamTile top={ (team[37] * 30) } z={ Math.round(5000 / team[7])} >
-        //     {team[7]} 
-        //     <img 
-        //       height="40"
-        //       src={ GSW }/>
-        //     {team[4]} 
-        //   </TeamTile>
-        //   )
-        // )}
-
-//  box-shadow: ${props => (props.z + 0 < 5) ? "6px 6px 6px 0px rgba(0,0,0,0.5)" : "none"}
-
-
+// "6px 6px 6px 0px rgba(0,0,0,0.5)" : "none"}
 
 // ||
 // ( (filteredData[i][37] - lastGamesBackRow >= 2) 

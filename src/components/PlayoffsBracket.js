@@ -17,15 +17,6 @@ import {
 
 export class PlayoffsBracket extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: {},
-      dataArr: [],
-    };
-  }
-
-
   render() {
 
     const { conferenceData } = this.props;
@@ -50,7 +41,7 @@ export class PlayoffsBracket extends Component {
         </PlayoffTeamsContainer>
       </PlayoffBracketContainer>
     )
-    
+
   }
 }
 

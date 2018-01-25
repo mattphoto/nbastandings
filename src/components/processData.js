@@ -28,9 +28,10 @@ export default function ( data, conf ) {
     teamObj.gamesBack = filteredData[i][37];
     teamObj.zindex = 16 - filteredData[i][7];
     teamObj.top = filteredData[i][37] * gamesBackRowHeight;
-    teamObj.assets = teamAssets[teamObj.name]
+    teamObj.assets = teamAssets[teamObj.name];
+    teamObj.currentStreak = filteredData[i][35];
 
-    if ( (filteredData[i][37] - lastGamesBackRow >= 3)
+    if ( (filteredData[i][37] - lastGamesBackRow >= gamesBackRowFactor + 1)
       ||
       ( (filteredData[i][37] - lastGamesBackRow >= gamesBackRowFactor) 
         && ( currentLeftPosition === leftMargin  ) )
