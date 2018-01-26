@@ -102,6 +102,60 @@ export const TeamTile = styled.div`
   box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.5);
   border-left: 6px solid ${props => props.secondaryColor};
 `
+export const TeamTileExpandedContainer = styled.span`
+  position: absolute;
+  top: ${props => props.top + gamesBackRowHeight * 2}px;
+  left: ${props => props.left}px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: ${teamTitleWidth}px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.5);
+  border-left: 6px solid ${props => props.secondaryColor};
+  font-size: 14px;
+  color: #000;
+  padding: 10px;
+  z-index: 100;
+
+`
+export const TeamTileExpandedContent = styled.span`
+  font-weight: 600;
+`
+export const BarGraphHeader = styled.div`
+  display: flex;
+  position: absolute;
+  top: 14px;
+  align-items: center;
+  font-weight: 600;
+  color: #333;
+`
+export const BarGraphContainer = styled.span`
+  position: relative;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  font-family: Inconsolata;
+  font-size: 14px;
+
+`
+export const BarGraphWinSegment = styled.span`
+  display: flex;
+  flex-grow: 50;
+  background: purple;
+  color: #FFF;
+  text-shadow: 1px 1px 4px #666;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+`
+export const BarGraphLossSegment = styled.span`
+  flex-grow: 50;
+  width: 24px;
+
+`
 export const ConferenceHeader = styled.div`
   display: flex;
   align-items: center;
@@ -128,7 +182,6 @@ export const StreaksContainer = styled.div`
   justify-content: ${props => props.direction};
   height: 50px;
   width: 30px;
-  margin-left: auto;
 `
 export const StreakDot = styled.div`
   height: 10px;
@@ -138,6 +191,13 @@ export const StreakDot = styled.div`
     ${props => (props.streak > 0) ? `rgba(0,100,0,.7)` : `rgba(139,0,0,.7)` };
   border: 1px solid rgba(255,255,255,.5);
 
+`
+export const RankStyle = styled.span`
+  font-size: 30px;
+  text-shadow: 
+    ${props => (props.index > 7) ? `none` : `1px 1px 4px #666` };
+  color: 
+    ${props => (props.index > 7) ? `rgba(255,255,255,.6)` : `rgba(255,255,255,1)` };
 `
 
 // .reverse().map(function(...

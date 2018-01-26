@@ -65,7 +65,7 @@ export const teamAssets = {
   "Knicks": [ "NYK", "#F58426", "#006BB6", NYK],
   "Hornets": [ "CHA", "#00788C", "#1D1160", CHA],
   "Bulls": [ "CHI", "#CE1141", "#000", CHI],
-  "Nets": [ "BKN", "#000", "#FFF", BKN],
+  "Nets": [ "BKN", "#000", "#EEE", BKN],
   "Hawks": [ "ATL", "#E03A3E", "#C4D600", ATL],
   "Magic": [ "ORL", "#0B77BD", "#C2CCD2", ORL],
 }

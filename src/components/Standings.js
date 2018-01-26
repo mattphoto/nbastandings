@@ -3,17 +3,17 @@ import React, { Component } from 'react';
 import { GamesBackRows } from './GamesBackRows';
 import { PlayoffsBracket } from './PlayoffsBracket';
 import { StreakIndicator } from './StreakIndicator';
+import { TeamTilesPlot } from './TeamTilesPlot';
 
 import {
   TeamTile,
-  StandingsContainer
+  StandingsContainer,
+  RankStyle,
 } from './styles';
 
 import {
   gamesBackRowFactor,
-  gamesBackRowHeight,
 } from './constants';
-
 
 export class Standings extends Component {
 
@@ -24,7 +24,6 @@ export class Standings extends Component {
       dataArr: [],
     };
   }
-
 
   render() {
 
@@ -40,31 +39,7 @@ export class Standings extends Component {
     return (
       <StandingsContainer >
         <GamesBackRows numberOfGamesBackRows={numberOfGamesBackRows}/>
-        { conferenceData.map( (team, index) => 
-          (
-          <TeamTile 
-            top={ team.top } 
-            left = { team.left }
-            z={ team.zindex } 
-            color={ team.assets[1]}
-            secondaryColor={ team.assets[2] }
-            key={ team.assets[0] }
-          >
-            { index + 1 } 
-            <img 
-              height="44"
-              src={ team.assets[3] }
-              alt={ team.assets[0] }
-            />
-
-            <span style={{ color: "rgba(255,255,255,.8" }}>{ team.assets[0] }</span> &nbsp;
-            <span style={{ fontFamily: "Inconsolata", fontWeight: "700" }}>{ team.record }</span>
-          
-            <StreakIndicator streak={conferenceData[index].currentStreak}/>
-
-          </TeamTile>
-          )
-        )}
+        <TeamTilesPlot conferenceData={conferenceData}/>
         <PlayoffsBracket conferenceData={conferenceData}/>
       </StandingsContainer>
     )
