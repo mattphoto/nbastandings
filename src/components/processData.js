@@ -23,6 +23,7 @@ export default function ( data, conf ) {
   for (let i=0 ; i < filteredData.length; i++ ) {
     let teamObj = {};
 
+    teamObj.city = filteredData[i][3];
     teamObj.name = filteredData[i][4];
     teamObj.record = filteredData[i][16];
     teamObj.gamesBack = filteredData[i][37];
@@ -30,6 +31,14 @@ export default function ( data, conf ) {
     teamObj.top = filteredData[i][37] * gamesBackRowHeight;
     teamObj.assets = teamAssets[teamObj.name];
     teamObj.currentStreak = filteredData[i][35];
+    teamObj.oct = filteredData[i][76] || [100,0];
+    teamObj.nov = filteredData[i][77] || [100,0];
+    teamObj.dec = filteredData[i][78] || [100,0];
+    teamObj.jan = filteredData[i][67] || [100,0];
+    teamObj.feb = filteredData[i][68] || [100,0];
+    teamObj.mar = filteredData[i][69] || [100,0];
+    teamObj.apr = filteredData[i][70] || [100,0];
+
 
     if ( (filteredData[i][37] - lastGamesBackRow >= gamesBackRowFactor + 1)
       ||

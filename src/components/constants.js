@@ -1,7 +1,7 @@
 export const leftMargin = 42;
 export const mainContainerWidth = 1200;
-export const gamesBackRowFactor = 2;  
-export const gamesBackRowHeight = 28;
+export const gamesBackRowFactor = 2;  // 3
+export const gamesBackRowHeight = 28; // 18
 
 // derived constants
 

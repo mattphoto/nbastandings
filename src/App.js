@@ -43,6 +43,7 @@ class App extends Component {
       }.bind(this))
   }
 
+//#1D42BA
   render() {
     console.log('confs', this.state.data, this.state.dataEast)
 
@@ -50,7 +51,8 @@ class App extends Component {
 
     return (
       <div>
-        <ConferenceHeader confBGColor="#1D42BA">
+        <ConferenceHeader confBGColor="#ff0081">
+          Golden state warriors Hanna
           2017 &ndash; 2018 NBA Western Conference Standings
         </ConferenceHeader>
         <Standings 

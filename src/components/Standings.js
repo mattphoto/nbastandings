@@ -16,15 +16,6 @@ import {
 } from './constants';
 
 export class Standings extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: {},
-      dataArr: [],
-    };
-  }
-
   render() {
 
     const { conferenceData } = this.props;

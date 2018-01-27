@@ -18,14 +18,13 @@ export class TeamTilesPlot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hoveredIndex: 3
+      hoveredIndex: -1
     };
     this.hoverTeamTile = this.hoverTeamTile.bind(this);
     this.hoverOutTeamTile = this.hoverOutTeamTile.bind(this);
   }
 
   hoverTeamTile(index) {
-    console.log('hovered', index, this.state.hoveredIndex )
     this.setState({ hoveredIndex: index})
   }
 
@@ -86,10 +85,18 @@ export class TeamTilesPlot extends Component {
               <TeamTileExpandedPanel 
                 top={ team.top } 
                 left = { team.left }
+                primaryColor={ team.assets[1] }
                 secondaryColor={ team.assets[2] }
-
+                city = { team.city }
+                name = { team.name }
+                oct = { team.oct }
+                nov = { team.nov }
+                dec = { team.dec }
+                jan = { team.jan }
+                feb = { team.feb }
+                mar = { team.mar }
+                apr = { team.apr }
               />
-
             }
           </a>
           )
