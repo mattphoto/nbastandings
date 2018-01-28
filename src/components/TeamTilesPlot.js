@@ -8,10 +8,6 @@ import {
   RankStyle,
 } from './styles';
 
-import {
-  gamesBackRowFactor,
-} from './constants';
-
 export class TeamTilesPlot extends Component {
 
   constructor(props) {
@@ -80,6 +76,7 @@ export class TeamTilesPlot extends Component {
             </TeamTile>
 
             { hoveredIndex === index &&
+
               <TeamTileExpandedPanel 
                 top={ team.top } 
                 left = { team.left }

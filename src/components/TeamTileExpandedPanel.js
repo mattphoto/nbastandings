@@ -19,12 +19,14 @@ export class TeamTileExpandedPanel extends Component {
       jan,
       feb,
       mar,
-      apr
+      apr,
+      last10,
     } = this.props;
 
     return (
       <div>
         <TeamTileExpandedContainer {...this.props}>
+
           <TeamBarGraphElement 
             value={ processWinLoss(oct) }
             month={ 'oct' }

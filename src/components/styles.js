@@ -61,7 +61,10 @@ export const PlayoffBracketContainer = styled.div`
   width: 310px;
   font-family: 'Open Sans';
   font-weight: 400;
-  z-index: 0;
+  z-index: ${props => (props.hovered) 
+      ? 200
+      : 0 };
+
   padding: 12px 12px 4px 12px;
   background: #F1F1F1;
   border: 1px solid #CCC;
@@ -120,9 +123,6 @@ export const TeamTileExpandedContainer = styled.div`
   padding: 0 10px 10px 10px;
   z-index: 100;
 `
-export const TeamTileExpandedContent = styled.span`
-  font-weight: 600;
-`
 export const BarGraphHeader = styled.div`
   position: absolute;
   top: 14px;
@@ -132,7 +132,6 @@ export const BarGraphHeader = styled.div`
   font-weight: 600;
   color: #333;
   text-shadow: #FFF 1px 1px 2px;
-
 `
 export const BarGraphContainer = styled.div`
   position: relative;
@@ -201,15 +200,21 @@ export const StreakDot = styled.div`
   width: 10px;
   border-radius: 2px;
   background: 
-    ${props => (props.streak > 0) ? `rgba(0,100,0,.7)` : `rgba(139,0,0,.7)` };
+    ${props => (props.streak > 0) 
+      ? `rgba(0,100,0,.7)` 
+      : `rgba(139,0,0,.7)` };
   border: 1px solid rgba(255,255,255,.5);
 `
 export const RankStyle = styled.span`
   font-size: 30px;
   text-shadow: 
-    ${props => (props.index > 7) ? `none` : `1px 1px 4px #666` };
+    ${props => (props.index > 7) 
+      ? `none` 
+      : `1px 1px 4px #666` };
   color: 
-    ${props => (props.index > 7) ? `rgba(255,255,255,.6)` : `rgba(255,255,255,1)` };
+    ${props => (props.index > 7) 
+      ? `rgba(255,255,255,.6)` 
+      : `rgba(255,255,255,1)` };
 `
 export const MouseOverMessage = styled.div`
   position: absolute;
