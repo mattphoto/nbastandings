@@ -131,6 +131,8 @@ export const BarGraphHeader = styled.div`
   text-align: center;
   font-weight: 600;
   color: #333;
+  text-shadow: #FFF 1px 1px 2px;
+
 `
 export const BarGraphContainer = styled.div`
   position: relative;
@@ -209,7 +211,19 @@ export const RankStyle = styled.span`
   color: 
     ${props => (props.index > 7) ? `rgba(255,255,255,.6)` : `rgba(255,255,255,1)` };
 `
-
+export const MouseOverMessage = styled.div`
+  position: absolute;
+  margin: 0 auto;
+  top: ${gamesBackRowHeight / 2}px;
+  left: 0;
+  width: 1200px;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 18px;
+  color: #CCC;
+  z-index: 0;
+`
 // .reverse().map(function(...
 
 // "6px 6px 6px 0px rgba(0,0,0,0.5)" : "none"}

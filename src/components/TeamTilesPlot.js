@@ -5,7 +5,6 @@ import { StreakIndicator } from './StreakIndicator';
 import { TeamTileExpandedPanel } from './TeamTileExpandedPanel';
 import {
   TeamTile,
-  StandingsContainer,
   RankStyle,
 } from './styles';
 
@@ -37,12 +36,11 @@ export class TeamTilesPlot extends Component {
     const { conferenceData } = this.props;
     const { hoveredIndex } = this.state;
 
-    if (!conferenceData) {return null;}
-
-    const numberOfGamesBackRows = 
-    conferenceData.length 
-      ? Math.floor(conferenceData[conferenceData.length-1].gamesBack) + gamesBackRowFactor + 1
-      : 23;
+    // if (!conferenceData) {
+    //   return (
+    //     <GamesBackRows numberOfGamesBackRows={23}/>
+    //   );
+    // }
 
     return (
       <div>

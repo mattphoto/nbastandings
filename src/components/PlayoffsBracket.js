@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import { GamesBackRows } from './GamesBackRows';
 import { PlayoffTeamTile } from './PlayoffTeamTile';
 
 import {
@@ -9,11 +8,6 @@ import {
   PlayoffTeamsContainer,
   PlayoffTeams,
 } from './styles';
-
-import {
-  gamesBackRowFactor,
-} from './constants';
-
 
 export class PlayoffsBracket extends Component {
 

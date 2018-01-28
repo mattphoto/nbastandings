@@ -3,7 +3,6 @@ import {TeamBarGraphElement} from './TeamBarGraphElement';
 
 import {
   TeamTileExpandedContainer,
-  TeamTileExpandedContent,
   BarGraphHeader,
 } from './styles';
 
@@ -13,11 +12,6 @@ export class TeamTileExpandedPanel extends Component {
 
   render() {
     const { 
-      top, 
-      left,
-      primaryColor,
-      secondaryColor,
-      city,
       name,
       oct,
       nov,

@@ -4,15 +4,8 @@ import NBA from 'nba';
 
 import { Standings } from './components/Standings';
 
-import {
-  gamesBackRowHeight,
-  gamesBackRowFactor,
-} from './components/constants';
-
 import { 
   ConferenceHeader,
-  StandingsContainer,
-  TeamTile,
 } from './components/styles';
 
 import processData from './components/processData'
@@ -43,7 +36,7 @@ class App extends Component {
       }.bind(this))
   }
 
-//#1D42BA
+//#ff0081
   render() {
     console.log('confs', this.state.data, this.state.dataEast)
 
@@ -51,8 +44,7 @@ class App extends Component {
 
     return (
       <div>
-        <ConferenceHeader confBGColor="#ff0081">
-          Golden state warriors Hanna
+        <ConferenceHeader confBGColor="#1D42BA">
           2017 &ndash; 2018 NBA Western Conference Standings
         </ConferenceHeader>
         <Standings 

@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 
-import { GamesBackRows } from './GamesBackRows';
-
 import {
-  PlayoffBracketContainer,
   PlayoffTeamTileStyle,
   PlayoffTeamRank,
   PlayoffTeamRecord,
 } from './styles';
-
-import {
-  gamesBackRowFactor,
-} from './constants';
 
 export class PlayoffTeamTile extends Component {
 

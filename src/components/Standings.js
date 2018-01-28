@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 
 import { GamesBackRows } from './GamesBackRows';
 import { PlayoffsBracket } from './PlayoffsBracket';
-import { StreakIndicator } from './StreakIndicator';
 import { TeamTilesPlot } from './TeamTilesPlot';
 
 import {
-  TeamTile,
   StandingsContainer,
-  RankStyle,
+  MouseOverMessage,
 } from './styles';
 
 import {
@@ -20,7 +18,11 @@ export class Standings extends Component {
 
     const { conferenceData } = this.props;
 
-    if (!conferenceData) {return null;}
+    // if (!conferenceData) {
+    //   return (
+    //     <GamesBackRows numberOfGamesBackRows={23}/>
+    //   );
+    // }
 
     const numberOfGamesBackRows = 
     conferenceData.length 
@@ -32,6 +34,7 @@ export class Standings extends Component {
         <GamesBackRows numberOfGamesBackRows={numberOfGamesBackRows}/>
         <TeamTilesPlot conferenceData={conferenceData}/>
         <PlayoffsBracket conferenceData={conferenceData}/>
+        <MouseOverMessage>mouse over a team to see more</MouseOverMessage>
       </StandingsContainer>
     )
 

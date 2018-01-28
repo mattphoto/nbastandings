@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 import {
-  TeamTileExpandedContainer,
-  TeamTileExpandedContent,
   BarGraphContainer,
   BarGraphWinSegment,
   BarGraphLossSegment,
@@ -14,17 +12,10 @@ export class TeamBarGraphElement extends Component {
   render() {
 
     const { 
-      top, 
-      left,
       primaryColor,
-      secondaryColor,
-      city,
-      name,
       value,
       month
     } = this.props;
-
-    console.log(primaryColor)
 
     return (
       <div>
