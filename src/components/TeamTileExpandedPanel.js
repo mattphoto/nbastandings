@@ -70,7 +70,8 @@ export class TeamTileExpandedPanel extends Component {
             <span style={{ fontWeight: '800' }}>{ name }&nbsp;</span>
             Win
             <span style={{ fontWeight: '800' }}>% &nbsp;</span>
-            by Month</BarGraphHeader>
+            by Month
+          </BarGraphHeader>
         </TeamTileExpandedContainer>
       </div>
     )

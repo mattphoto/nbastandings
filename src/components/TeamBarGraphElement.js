@@ -32,13 +32,12 @@ export class TeamBarGraphElement extends Component {
           <BarGraphContainer>
             <BarGraphLossSegment
               height={value[1]}
-            >
-            </BarGraphLossSegment>
+            />
             <BarGraphWinSegment
               primaryColor={primaryColor}
               height={value[0]}
             >
-              {value[0]}
+              {value[0]}-{value[1]}
             </BarGraphWinSegment>
             <div>{month}</div>
           </BarGraphContainer>
@@ -47,13 +46,11 @@ export class TeamBarGraphElement extends Component {
           <BarGraphContainer>
             <BarGraphLossSegment
               height={value[1]}
-            >
-            </BarGraphLossSegment>
+            />
             <BarGraphZeroSegment
-              primaryColor={primaryColor}
               height={value[0]}
             >
-              {value[0]}
+              0-0
             </BarGraphZeroSegment>
             <div>{month}</div>
           </BarGraphContainer>

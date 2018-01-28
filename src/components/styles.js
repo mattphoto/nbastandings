@@ -111,7 +111,7 @@ export const TeamTileExpandedContainer = styled.div`
   align-items: flex-end;
   justify-content: space-around;
   width: ${teamTitleWidth}px;
-  background: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.95);
   box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.5);
   border-left: 6px solid ${props => props.secondaryColor};
   font-size: 14px;
@@ -124,10 +124,11 @@ export const TeamTileExpandedContent = styled.span`
   font-weight: 600;
 `
 export const BarGraphHeader = styled.div`
-  display: flex;
   position: absolute;
   top: 14px;
-  align-items: center;
+  left: 0;
+  width: 280px;
+  text-align: center;
   font-weight: 600;
   color: #333;
 `
@@ -138,15 +139,14 @@ export const BarGraphContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: stretch;
-  font-family: Inconsolata;
-  font-size: 14px;
+  font-size: 12px;
 `
 export const BarGraphWinSegment = styled.span`
   display: flex;
   flex-grow: ${props => props.height};
   background: ${props => props.primaryColor};
   color: #FFF;
-  font-size: 14px;
+  font-size: 10px;
   text-shadow: 1px 1px 4px #666;
   width: 26px;
   align-items: flex-end;
@@ -155,11 +155,15 @@ export const BarGraphWinSegment = styled.span`
   margin-bottom: 4px;
 `
 export const BarGraphLossSegment = styled.span`
+  display: flex;
   flex-grow: ${props => props.height};
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 6px;
   width: 26px;
 `
 export const BarGraphZeroSegment = BarGraphWinSegment.extend`
-  background: #FFF;
+  background: rgba(255,255,255,0);
   text-shadow: none;
   color: #333;
 `
