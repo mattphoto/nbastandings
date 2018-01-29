@@ -4,10 +4,9 @@ import {
   mainContainerWidth,
   gamesBackRowFactor,
   gamesBackRowHeight,
+  teamTitleWidth,
   leftMargin,
 } from './constants';
-
-const teamTitleWidth = (mainContainerWidth - 84) / 4
 
 export const PlayoffTeamsContainer = styled.div`
   display: flex;
@@ -57,13 +56,11 @@ export const PlayoffTeamTileStyle = styled.div`
 export const PlayoffBracketContainer = styled.div`
   position: absolute;
   top: ${gamesBackRowHeight / 2}px;
-  right: ${leftMargin + 6}px;
+  right: ${leftMargin + 10}px;
   width: 310px;
   font-family: 'Open Sans';
   font-weight: 400;
-  z-index: ${props => (props.hovered) 
-      ? 200
-      : 0 };
+  z-index: ${props => (props.hovered) ? 200 : 0 };
 
   padding: 12px 12px 4px 12px;
   background: #F1F1F1;
@@ -101,7 +98,7 @@ export const TeamTile = styled.div`
   font-weight: 800;
   color: #FFF;
   padding: 4px 4px 4px 10px;
-  z-index: ${props => props.z};
+  z-index: ${props => props.hovered ? 50 : props.z};
   box-shadow: 6px 6px 6px 0px rgba(0,0,0,0.5);
   border-left: 6px solid ${props => props.secondaryColor};
 `
@@ -229,6 +226,31 @@ export const MouseOverMessage = styled.div`
   color: #CCC;
   z-index: 0;
 `
+export const FooterContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: ${mainContainerWidth}px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #DDD;
+`
+export const FooterLogo = styled.div`
+  width: ${teamTitleWidth}px;
+  background: #999;
+  color: #EEE;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 800;
+`
+export const FooterColumn = styled.div`
+  width: ${teamTitleWidth}px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+`
+
+
 // .reverse().map(function(...
 
 // "6px 6px 6px 0px rgba(0,0,0,0.5)" : "none"}

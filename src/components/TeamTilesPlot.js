@@ -53,7 +53,8 @@ export class TeamTilesPlot extends Component {
             <TeamTile 
               top={ team.top } 
               left = { team.left }
-              z={ team.zindex } 
+              z={ team.zindex }
+              hovered={ hoveredIndex === index }
               color={ team.assets[1]}
               secondaryColor={ team.assets[2] }
               key={ team.assets[0] }

@@ -3,6 +3,7 @@ import './App.css';
 import NBA from 'nba';
 
 import { Standings } from './components/Standings';
+import { Footer } from './components/Footer';
 
 import { 
   ConferenceHeader,
@@ -56,6 +57,7 @@ class App extends Component {
         <Standings 
           conferenceData={ dataEast }
         />
+        <Footer/>
       </div>
     );
   }
