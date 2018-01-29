@@ -6,6 +6,8 @@ import {
   FooterContainer,
   FooterLogo,
   FooterColumn,
+  FooterHeader,
+  FooterLink,
 } from './styles';
 
 import {
@@ -17,32 +19,37 @@ export class Footer extends Component {
 
     return (
       <FooterContainer >
-        <FooterColumn>
-          bballstandings.com
-          <div
-            style={{ marginTop: '60px', fontWeight: '400', fontSize: '14px' }}
-            
-          >
-                    Comments? Email: <a href="mailto:bball@rueif.com">Matt</a>
-
-          </div>
+        <FooterColumn space>
+          <FooterLogo>bballstandings.com</FooterLogo>
+          <FooterLink>
+            <a href="mailto:bball@rueif.com">email feedback</a>
+          </FooterLink>
         </FooterColumn>
         <FooterColumn>
-
         </FooterColumn>
         <FooterColumn>
-
         </FooterColumn>
-
         <FooterColumn>
-          Made in San Jose, California
-          NBA by Nick Bottmley
-          Create React App
-          Styled-Components
-          Hosted at: surge.sh
-
+          <FooterHeader>colophon</FooterHeader>
+          <FooterLink>
+            <a href="https://github.com/facebook/create-react-app">create-react-app</a>
+          </FooterLink>
+          <FooterLink>
+            <a href="https://www.styled-components.com/">Styled-Components</a>
+          </FooterLink>
+          <FooterLink>
+            <a href="https://github.com/bttmly/nba">bttmly / nba</a>
+          </FooterLink>
+          <FooterLink>
+            <a href="http://surge.sh/">surge.sh</a>
+          </FooterLink>
+          <FooterLink>
+            <a href="https://fonts.google.com/specimen/Open+Sans">Open+Sans:400,600,800</a>
+          </FooterLink>
+          <FooterLink>
+            <a href="https://fonts.google.com/specimen/Inconsolata">Inconsolata:400,700</a>
+          </FooterLink>
         </FooterColumn>
-
       </FooterContainer>
     )
 

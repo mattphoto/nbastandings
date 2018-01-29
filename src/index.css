@@ -3,3 +3,24 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+a:link {
+  color: #999;
+}
+
+a:visited {
+  color: #AAA;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:active {
+  color: #F00;
+}

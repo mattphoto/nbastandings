@@ -232,24 +232,38 @@ export const FooterContainer = styled.div`
   position: relative;
   width: ${mainContainerWidth}px;
   margin: 0 auto;
+  margin-bottom: 18px;
   padding: 20px;
   background: #DDD;
 `
-export const FooterLogo = styled.div`
-  width: ${teamTitleWidth}px;
-  background: #999;
-  color: #EEE;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: 800;
-`
 export const FooterColumn = styled.div`
+  display: flex;
+  flex-direction: column;
   width: ${teamTitleWidth}px;
-  color: #666;
+  justify-content: 
+    ${props => props.space 
+      ? 'space-between' 
+      : 'flex-end'};
+  color: #777;
   font-size: 14px;
   font-weight: 600;
 `
-
+export const FooterHeader = styled.div`
+  color: #999;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 6px;
+`
+export const FooterLogo = styled.div`
+  color: #666;
+  font-size: 16px;
+  font-weight: 800;
+`
+export const FooterLink = styled.div`
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 6px;
+`
 
 // .reverse().map(function(...
 

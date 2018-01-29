@@ -18,11 +18,11 @@ export class Standings extends Component {
 
     const { conferenceData } = this.props;
 
-    // if (!conferenceData) {
-    //   return (
-    //     <GamesBackRows numberOfGamesBackRows={23}/>
-    //   );
-    // }
+    if (!conferenceData) {
+      return (
+        <GamesBackRows numberOfGamesBackRows={23}/>
+      );
+    }
 
     const numberOfGamesBackRows = 
     conferenceData.length 

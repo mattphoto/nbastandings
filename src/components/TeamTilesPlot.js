@@ -32,12 +32,6 @@ export class TeamTilesPlot extends Component {
     const { conferenceData } = this.props;
     const { hoveredIndex } = this.state;
 
-    // if (!conferenceData) {
-    //   return (
-    //     <GamesBackRows numberOfGamesBackRows={23}/>
-    //   );
-    // }
-
     return (
       <div>
         { conferenceData.map( (team, index) => 
