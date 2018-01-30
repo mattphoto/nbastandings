@@ -25,8 +25,6 @@ export class GamesBackRows extends Component {
           <GamesBackRow key={ i+'gbr' }>
             <span>{i}</span>
             <span>{i}</span>
-            <span>{i}</span>
-            <span>{i}</span>
           </GamesBackRow>
         );                
       }, this)}

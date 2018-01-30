@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 
 import {
-  StandingsContainer,
-  MouseOverMessage,
   FooterContainer,
   FooterLogo,
   FooterColumn,
   FooterHeader,
   FooterLink,
 } from './styles';
-
-import {
-  gamesBackRowFactor,
-} from './constants';
 
 export class Footer extends Component {
   render() {
@@ -28,26 +22,59 @@ export class Footer extends Component {
         <FooterColumn>
         </FooterColumn>
         <FooterColumn>
+          <FooterHeader>sites</FooterHeader>
+          <FooterLink>
+            <a href="http://www.nba.com/standings#/" target="_blank">
+              NBA.com Standings
+            </a>
+          </FooterLink>
+          <FooterLink>
+            <a href="http://www.tankathon.com/" target="_blank">
+              Tankathon
+            </a>
+          </FooterLink>
+          <FooterLink>
+            <a href="https://cleaningtheglass.com/" target="_blank">
+              Cleaning The Glass
+            </a>
+          </FooterLink>
+          <FooterLink>
+            <a href="https://projects.fivethirtyeight.com/2018-nba-predictions/?ex_cid=bballstandings" target="_blank">
+              FiveThirtyEight NBA Predictions
+            </a>
+          </FooterLink>
         </FooterColumn>
         <FooterColumn>
           <FooterHeader>colophon</FooterHeader>
           <FooterLink>
-            <a href="https://github.com/facebook/create-react-app">create-react-app</a>
+            <a href="https://github.com/facebook/create-react-app" target="_blank">
+              create-react-app
+            </a>
           </FooterLink>
           <FooterLink>
-            <a href="https://www.styled-components.com/">Styled-Components</a>
+            <a href="https://www.styled-components.com/" target="_blank">
+              Styled-Components
+            </a>
           </FooterLink>
           <FooterLink>
-            <a href="https://github.com/bttmly/nba">bttmly / nba</a>
+            <a href="https://github.com/bttmly/nba" target="_blank">
+              bttmly / nba
+            </a>
           </FooterLink>
           <FooterLink>
-            <a href="http://surge.sh/">surge.sh</a>
+            <a href="http://surge.sh/" target="_blank">
+              surge.sh
+            </a>
           </FooterLink>
           <FooterLink>
-            <a href="https://fonts.google.com/specimen/Open+Sans">Open+Sans:400,600,800</a>
+            <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">
+              Open+Sans:400,600,800
+            </a>
           </FooterLink>
           <FooterLink>
-            <a href="https://fonts.google.com/specimen/Inconsolata">Inconsolata:400,700</a>
+            <a href="https://fonts.google.com/specimen/Inconsolata" target="_blank">
+              Inconsolata:400,700
+            </a>
           </FooterLink>
         </FooterColumn>
       </FooterContainer>
@@ -55,6 +82,3 @@ export class Footer extends Component {
 
   }
 }
-
-
-

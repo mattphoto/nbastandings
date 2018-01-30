@@ -151,6 +151,7 @@ export const BarGraphWinSegment = styled.span`
   justify-content: center;
   padding-bottom: 6px;
   margin-bottom: 4px;
+  z-index: 1;
 `
 export const BarGraphLossSegment = styled.span`
   display: flex;
@@ -158,13 +159,29 @@ export const BarGraphLossSegment = styled.span`
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 6px;
-  width: 26px;
 `
 export const BarGraphZeroSegment = BarGraphWinSegment.extend`
   background: rgba(255,255,255,0);
   text-shadow: none;
   color: #333;
 `
+export const BarGraph75Rule = styled.hr`
+  position: absolute;
+  left: 15px;
+  top: 73px;
+  width: 242px;
+  text-align: center;
+  border: 1px;
+  border-top: 1px solid #CCC;
+  z-index: 0;
+`
+export const BarGraph50Rule = BarGraph75Rule.extend`
+  top: 0px;
+`
+export const BarGraph25Rule = BarGraph75Rule.extend`
+  top: 0px;
+`
+
 export const ConferenceHeader = styled.div`
   display: flex;
   align-items: center;
@@ -216,7 +233,7 @@ export const RankStyle = styled.span`
 export const MouseOverMessage = styled.div`
   position: absolute;
   margin: 0 auto;
-  top: ${gamesBackRowHeight / 2}px;
+  top: ${gamesBackRowHeight}px;
   left: 0;
   width: 1200px;
   text-align: center;
@@ -243,7 +260,7 @@ export const FooterColumn = styled.div`
   justify-content: 
     ${props => props.space 
       ? 'space-between' 
-      : 'flex-end'};
+      : 'flex-start'};
   color: #777;
   font-size: 14px;
   font-weight: 600;

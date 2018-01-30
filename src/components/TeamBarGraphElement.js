@@ -41,7 +41,7 @@ export class TeamBarGraphElement extends Component {
             <BarGraphZeroSegment
               height={value[0]}
             >
-              0-0
+              
             </BarGraphZeroSegment>
             <div>{month}</div>
           </BarGraphContainer>

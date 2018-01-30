@@ -34,7 +34,7 @@ export class Standings extends Component {
         <GamesBackRows numberOfGamesBackRows={numberOfGamesBackRows}/>
         <TeamTilesPlot conferenceData={conferenceData}/>
         <PlayoffsBracket conferenceData={conferenceData}/>
-        <MouseOverMessage>mouse over a team to see more</MouseOverMessage>
+        <MouseOverMessage>number of games behind</MouseOverMessage>
       </StandingsContainer>
     )
 
