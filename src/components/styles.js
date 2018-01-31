@@ -129,6 +129,7 @@ export const BarGraphHeader = styled.div`
   font-weight: 600;
   color: #333;
   text-shadow: #FFF 1px 1px 2px;
+  z-index: 2;
 `
 export const BarGraphContainer = styled.div`
   position: relative;

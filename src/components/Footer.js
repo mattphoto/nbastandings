@@ -43,6 +43,11 @@ export class Footer extends Component {
               FiveThirtyEight NBA Predictions
             </a>
           </FooterLink>
+          <FooterLink>
+            <a href="https://fansided.com/nba/the-step-back/nylon-calculus/" target="_blank">
+              Nylon Calculus
+            </a>
+          </FooterLink>
         </FooterColumn>
         <FooterColumn>
           <FooterHeader>colophon</FooterHeader>
