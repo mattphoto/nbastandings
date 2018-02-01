@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import NBA from 'nba';
+import ReactGA from 'react-ga';
 
 import { Standings } from './components/Standings';
 import { Footer } from './components/Footer';
@@ -20,6 +21,10 @@ class App extends Component {
       dataWest: [],
       dataEast: [],
     };
+    ReactGA.initialize('UA-113355224-1');
+    // This just needs to be called once since we have no routes in this case.
+    ReactGA.pageview(window.location.pathname);
+
   }
 
   componentDidMount() {

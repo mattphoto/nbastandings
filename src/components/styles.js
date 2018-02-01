@@ -25,7 +25,7 @@ export const PlayoffHeader = styled.div`
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #FFF;
+  color: #DDD;
   background: #999;
   margin-bottom: 10px;
 `
@@ -207,7 +207,7 @@ export const StreaksContainer = styled.div`
   align-content: flex-end;
   flex-wrap: wrap;
   justify-content: ${props => props.direction};
-  height: 50px;
+  height: ${gamesBackRowHeight * gamesBackRowFactor - 8}px;
   width: 30px;
 `
 export const StreakDot = styled.div`
