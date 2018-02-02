@@ -163,8 +163,14 @@ export const BarGraphLossSegment = styled.span`
 `
 export const BarGraphZeroSegment = BarGraphWinSegment.extend`
   background: rgba(255,255,255,0);
+`
+export const BarGraphWinZeroSegment = BarGraphZeroSegment.extend`
+  border-bottom: 2px solid ${props => props.primaryColor};
   text-shadow: none;
-  color: #333;
+  color: #000;
+  font-weight: 600;
+  font-size: 11px;
+  padding-bottom: 3px;
 `
 export const BarGraph75Rule = styled.hr`
   position: absolute;

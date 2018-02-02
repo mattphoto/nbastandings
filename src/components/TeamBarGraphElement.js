@@ -5,6 +5,7 @@ import {
   BarGraphWinSegment,
   BarGraphLossSegment,
   BarGraphZeroSegment,
+  BarGraphWinZeroSegment,
 } from './styles';
 
 export class TeamBarGraphElement extends Component {
@@ -17,9 +18,10 @@ export class TeamBarGraphElement extends Component {
       month
     } = this.props;
 
+    console.log(month, value[0], '=', value[1])
     return (
       <div>
-        { (value[0] > 0) &&
+        { (value[0] > 0 ) &&
           <BarGraphContainer>
             <BarGraphLossSegment
               height={value[1]}
@@ -33,15 +35,28 @@ export class TeamBarGraphElement extends Component {
             <div>{month}</div>
           </BarGraphContainer>
         }
-        { (value[0] === 0) &&
+        { (value[0] === 0 && value[1] > 0) &&
           <BarGraphContainer>
             <BarGraphLossSegment
-              height={value[1]}
+              height={100}
+            />
+            <BarGraphWinZeroSegment
+              primaryColor={primaryColor}
+              height={0}
+            >
+              {value[0]}-{value[1]}
+            </BarGraphWinZeroSegment>
+            <div>{month}</div>
+          </BarGraphContainer>
+        }
+        { (value[0] === 0 && value[1] === 0) &&
+          <BarGraphContainer>
+            <BarGraphLossSegment
+              height={100}
             />
             <BarGraphZeroSegment
-              height={value[0]}
+              height={0}
             >
-              
             </BarGraphZeroSegment>
             <div>{month}</div>
           </BarGraphContainer>

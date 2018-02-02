@@ -48,6 +48,11 @@ export class Footer extends Component {
               Nylon Calculus
             </a>
           </FooterLink>
+          <FooterLink>
+            <a href="http://nbawowy.com/" target="_blank" rel="noopener noreferrer">
+              nbawowy!
+            </a>
+          </FooterLink>
         </FooterColumn>
         <FooterColumn>
           <FooterHeader>colophon</FooterHeader>

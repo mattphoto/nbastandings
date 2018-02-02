@@ -69,5 +69,3 @@ export const teamAssets = {
   "Hawks": [ "ATL", "#E03A3E", "#C4D600", ATL],
   "Magic": [ "ORL", "#0B77BD", "#C2CCD2", ORL],
 }
-
-
