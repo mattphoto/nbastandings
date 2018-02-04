@@ -188,13 +188,12 @@ export const BarGraph50Rule = BarGraph75Rule.extend`
 export const BarGraph25Rule = BarGraph75Rule.extend`
   top: 0px;
 `
-
 export const ConferenceHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   width: ${mainContainerWidth}px;
-  height: ${gamesBackRowHeight * 1.2 }px;
+  height: 36px;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;

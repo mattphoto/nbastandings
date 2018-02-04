@@ -16,7 +16,6 @@ export class PlayoffTeamTile extends Component {
     };
   }
 
-
   render() {
 
     const { conferenceData, rank } = this.props;

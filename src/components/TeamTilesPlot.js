@@ -57,7 +57,6 @@ export class TeamTilesPlot extends Component {
               <img 
                 height="44"
                 src={ team.assets[3] }
-                alt={ team.assets[0] }
               />
               <span style={{ color: "rgba(255,255,255,.8", marginRight: '12px' }}>
                 { team.assets[0] }

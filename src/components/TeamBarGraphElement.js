@@ -18,7 +18,6 @@ export class TeamBarGraphElement extends Component {
       month
     } = this.props;
 
-    console.log(month, value[0], '=', value[1])
     return (
       <div>
         { (value[0] > 0 ) &&

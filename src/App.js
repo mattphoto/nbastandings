@@ -5,6 +5,7 @@ import ReactGA from 'react-ga';
 
 import { Standings } from './components/Standings';
 import { Footer } from './components/Footer';
+import { ConferenceHead } from './components/ConferenceHead';
 
 import { 
   ConferenceHeader,
@@ -22,9 +23,7 @@ class App extends Component {
       dataEast: [],
     };
     ReactGA.initialize('UA-113355224-1');
-    // This just needs to be called once since we have no routes in this case.
     ReactGA.pageview(window.location.pathname);
-
   }
 
   componentDidMount() {
@@ -50,15 +49,13 @@ class App extends Component {
 
     return (
       <div>
-        <ConferenceHeader confBGColor="#1D42BA">
-          2017 &ndash; 2018 NBA Western Conference Standings
-        </ConferenceHeader>
+        <ConferenceHead 
+          conf="West"
+        />
         <Standings 
           conferenceData={ dataWest }
         />
-        <ConferenceHeader confBGColor="#C8102E">
-          2017 &ndash; 2018 NBA Eastern Conference Standings
-        </ConferenceHeader>
+        <ConferenceHead conf="East"/>
         <Standings 
           conferenceData={ dataEast }
         />
