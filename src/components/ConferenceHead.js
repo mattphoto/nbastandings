@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 
 import {
   ConferenceHeader,
+  ConferenceHeadButton,
 } from './styles';
-
-
-import {
-  mainContainerWidth,
-} from './constants';
-
 
 export class ConferenceHead extends Component {
 
@@ -25,6 +20,7 @@ export class ConferenceHead extends Component {
     return (
       <ConferenceHeader confBGColor={ confBGColor }>
         2017 &ndash; 2018 NBA { cardinal } Conference Standings
+        <ConferenceHeadButton>traditional view</ConferenceHeadButton>
       </ConferenceHeader>
     )
   }

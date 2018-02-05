@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import { GamesBackRows } from './GamesBackRows';
 import { PlayoffsBracket } from './PlayoffsBracket';
 import { TeamTilesPlot } from './TeamTilesPlot';
+import loadingIcon from '../assets/loading.svg';
 
 import {
   StandingsContainer,
   MouseOverMessage,
+  LoadingScreen,
 } from './styles';
 
 import {
@@ -16,11 +18,14 @@ import {
 export class Standings extends Component {
   render() {
 
-    const { conferenceData } = this.props;
+    const { conferenceData, isLoading } = this.props;
 
-    if (!conferenceData) {
+    if (!conferenceData || isLoading ) {
       return (
-        <GamesBackRows numberOfGamesBackRows={23}/>
+        <LoadingScreen>
+          <img src={ loadingIcon } alt="loading icon" />
+          <p>loading ...</p>
+        </LoadingScreen>
       );
     }
 

@@ -61,11 +61,25 @@ export const PlayoffBracketContainer = styled.div`
   font-family: 'Open Sans';
   font-weight: 400;
   z-index: ${props => (props.hovered) ? 200 : 0 };
-
   padding: 12px 12px 4px 12px;
   background: #F1F1F1;
   border: 1px solid #CCC;
   box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.5);
+`
+export const LoadingScreen = styled.div`
+  position: relative;
+  width: ${mainContainerWidth}px;
+  margin 0 auto;
+  border: 1px solid #DDD;
+  margin-bottom: ${gamesBackRowHeight}px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 750px) {
+    display: none;
+  }
 `
 export const StandingsContainer = styled.div`
   position: relative;
@@ -73,6 +87,9 @@ export const StandingsContainer = styled.div`
   margin 0 auto;
   border: 1px solid #DDD;
   margin-bottom: ${gamesBackRowHeight}px;
+  @media (max-width: 750px) {
+    display: none;
+  }
 `
 export const GamesBackRow = styled.div`
   display: flex;
@@ -189,6 +206,7 @@ export const BarGraph25Rule = BarGraph75Rule.extend`
   top: 0px;
 `
 export const ConferenceHeader = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,6 +219,31 @@ export const ConferenceHeader = styled.div`
   color: #FFF;
   background: ${props => props.confBGColor};
   margin-bottom: 4px;
+`
+export const ConferenceHeadButton = styled.a`
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  height: 24px;
+  line-height: 12px;
+  background-color: #EFEFEF;
+  border-radius: 3px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px;
+  text-shadow: 0px 1px 0px #ffffff;
+  text-transform:  lowercase;
+  &: hover {
+    background-color: #FFF;
+    box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.5);
+    color: #000;
+
+  }
+
 `
 export const StreaksContainer = styled.div`
   position: absolute;
@@ -253,7 +296,7 @@ export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  width: ${mainContainerWidth}px;
+  max-width: ${mainContainerWidth}px;
   margin: 0 auto;
   margin-bottom: 18px;
   padding: 20px;

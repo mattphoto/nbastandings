@@ -23,6 +23,27 @@ export default function ( data, conf ) {
   for (let i=0 ; i < filteredData.length; i++ ) {
     let teamObj = {};
 
+
+    teamObj.confRecord = filteredData[0][6];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+    // teamObj.city = filteredData[i][3];
+
+
+
     teamObj.city = filteredData[i][3];
     teamObj.name = filteredData[i][4];
     teamObj.record = filteredData[i][16];
@@ -55,6 +76,9 @@ export default function ( data, conf ) {
     }
     teamObj.left = currentLeftPosition;
     conference.push(teamObj)
+
+    console.log( 'teamObj.confRecord', teamObj.confRecord);
+
   }
   return conference;
 }

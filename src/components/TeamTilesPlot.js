@@ -54,10 +54,7 @@ export class TeamTilesPlot extends Component {
               key={ team.assets[0] }
             >
               <RankStyle index={index}>{ index + 1 } </RankStyle>
-              <img 
-                height="44"
-                src={ team.assets[3] }
-              />
+
               <span style={{ color: "rgba(255,255,255,.8", marginRight: '12px' }}>
                 { team.assets[0] }
               </span>
