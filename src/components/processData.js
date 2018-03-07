@@ -8,6 +8,8 @@ import {
 } from './constants';
 
 export default function ( data, conf ) {
+
+  const otherConfIndex = conf === 'West' ? 59 : 63 ;
     
   let conference = [];
   const filteredData = data.rowSet.filter((team) => {
@@ -24,23 +26,24 @@ export default function ( data, conf ) {
     let teamObj = {};
 
 
-    teamObj.confRecord = filteredData[0][6];
+    teamObj.confRecord = filteredData[i][6];
+    teamObj.otherConf = filteredData[i][otherConfIndex]
+    // teamObj.vsEast = filteredData[i][59];
+    // teamObj.vsWest = filteredData[i][63];
+    teamObj.vsHome = filteredData[i][17];
+    teamObj.vsAway = filteredData[i][18];
+    teamObj.last10 = filteredData[i][19];
+    teamObj.last10Home = filteredData[i][20];
+    teamObj.last10Away = filteredData[i][21];
+    teamObj.percentage = filteredData[i][14];
     // teamObj.city = filteredData[i][3];
     // teamObj.city = filteredData[i][3];
     // teamObj.city = filteredData[i][3];
     // teamObj.city = filteredData[i][3];
     // teamObj.city = filteredData[i][3];
     // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
+    teamObj.city = filteredData[i][3];
+    teamObj.ptsDiff = filteredData[i][58];
 
 
 
@@ -77,7 +80,17 @@ export default function ( data, conf ) {
     teamObj.left = currentLeftPosition;
     conference.push(teamObj)
 
-    console.log( 'teamObj.confRecord', teamObj.confRecord);
+    console.log( 'standings', teamObj.assets[0], 
+      teamObj.confRecord, teamObj.otherConf, 
+      'home', teamObj.vsHome,
+      'away', teamObj.vsAway,
+      teamObj.last10,
+      teamObj.last10Home,
+      teamObj.last10Away,
+
+
+
+      );
 
   }
   return conference;

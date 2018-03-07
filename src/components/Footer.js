@@ -16,7 +16,7 @@ export class Footer extends Component {
         <FooterColumn space>
           <FooterLogo>bballstandings.com</FooterLogo>
           <FooterLink>
-            <a href="mailto:bball@rueif.com">email feedback</a>
+            <a href="mailto:bball@rueif.com">contact</a>
           </FooterLink>
         </FooterColumn>
         <FooterColumn>

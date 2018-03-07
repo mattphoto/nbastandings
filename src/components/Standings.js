@@ -24,7 +24,7 @@ export class Standings extends Component {
       return (
         <LoadingScreen>
           <img src={ loadingIcon } alt="loading icon" />
-          <p>loading ...</p>
+          <p>loading &hellip;</p>
         </LoadingScreen>
       );
     }

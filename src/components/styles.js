@@ -96,7 +96,8 @@ export const GamesBackRow = styled.div`
   align-items: center;
   justify-content: space-between;
   color: #CCC;
-  background-image: linear-gradient(180deg, #EEE 20%, #fff 100%);
+  background-image: 
+    linear-gradient(180deg, #EEE 20%, #fff 100%);
   height: ${gamesBackRowHeight}px;
   font-size: 18px;  
   font-weight: 800;
@@ -225,37 +226,35 @@ export const ConferenceHeadButton = styled.a`
   top: 6px;
   right: 6px;
   height: 24px;
-  line-height: 12px;
+  line-height: 22px;
   background-color: #EFEFEF;
   border-radius: 3px;
   border: 1px solid #dcdcdc;
-  display: inline-block;
   cursor: pointer;
   color: #333;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
-  padding: 6px;
+  padding: 0 16px;
   text-shadow: 0px 1px 0px #ffffff;
   text-transform:  lowercase;
+  user-select: none;
   &: hover {
     background-color: #FFF;
     box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.5);
     color: #000;
-
   }
-
 `
 export const StreaksContainer = styled.div`
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 2px;
+  right: 3px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   align-content: flex-end;
   flex-wrap: wrap;
   justify-content: ${props => props.direction};
-  height: ${gamesBackRowHeight * gamesBackRowFactor - 8}px;
+  height: ${gamesBackRowHeight * gamesBackRowFactor - 4}px;
   width: 30px;
 `
 export const StreakDot = styled.div`
@@ -282,7 +281,7 @@ export const RankStyle = styled.span`
 export const MouseOverMessage = styled.div`
   position: absolute;
   margin: 0 auto;
-  top: ${gamesBackRowHeight}px;
+  top: ${gamesBackRowHeight * 4}px;
   left: 0;
   width: 1200px;
   text-align: center;
@@ -291,6 +290,76 @@ export const MouseOverMessage = styled.div`
   font-size: 18px;
   color: #CCC;
   z-index: 0;
+  vertical-align: middle;
+`
+export const TableCell = styled.td`
+  display: table-cell;
+  font-family: 'Open Sans'; 
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 20px;
+  color: #444;
+  text-align: right;
+  padding-left:  8px;
+  border-bottom: 1px solid #CDCDCD;
+  vertical-align: middle;
+`
+export const BaseTableCell = styled.td`
+  display: table-cell;
+  padding:  3px 0px;
+  vertical-align: middle;
+  border-bottom: ${props => props.hovered 
+    ? '1px solid #000'
+    : '1px solid #cdcdcd'
+  };
+  border-right: ${props => props.rightBorder 
+    ? '1px solid #000'
+    : ''
+  };
+  background-color: ${props => props.hoveredRow 
+    ? '#F7F7F7'
+    : '#FFF'
+  };
+`
+export const TeamRankCell = BaseTableCell.extend`
+  text-align: right;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 22px;
+  color: ${props => props.rank < 8 
+    ? '#666'
+    : '#AAA'
+  };
+  width: 200px;
+`
+export const TeamNameCell = BaseTableCell.extend`
+  text-align: left;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-size: 22px;
+  color: #999;
+  color: ${props => props.rank < 8 
+    ? '#777'
+    : '#999'
+  };
+
+  width: 200px;
+`
+export const RecordCell = BaseTableCell.extend`
+  font-family: 'Inconsolata'; 
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+`
+export const WinRateDeltaCell = RecordCell.extend`
+  background-color: ${props => props.bgColor};
+  color: ${props => props.fontColor};
+  font-weight: ${props => props.fontWeight > 21
+    ? 600
+    : 400
+  };
 `
 export const FooterContainer = styled.div`
   display: flex;

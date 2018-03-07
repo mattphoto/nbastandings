@@ -4,6 +4,7 @@ import NBA from 'nba';
 import ReactGA from 'react-ga';
 
 import { Standings } from './components/Standings';
+import { StandingsTable } from './componentsTable/StandingsTable';
 import { Footer } from './components/Footer';
 import { ConferenceHead } from './components/ConferenceHead';
 import processData from './components/processData'
@@ -17,9 +18,12 @@ class App extends Component {
       dataWest: [],
       dataEast: [],
       isLoading: true,
+      standingsView: true,
     };
     ReactGA.initialize('UA-113355224-1');
     ReactGA.pageview(window.location.pathname);
+
+    this.toggleView = this.toggleView.bind(this);
   }
 
   componentDidMount() {
@@ -36,28 +40,53 @@ class App extends Component {
           }
         })
       }.bind(this))
+
+    NBA.stats.boxScore({GameID: "0021401082"})
+      .then( results => {
+        return results.resultSets[0];
+      })
+      .then( function (data) {
+
+        console.log('BOXSCORE', data);
+      }.bind(this))
+
   }
 
-//#ff0081
+  
+
+  toggleView() {
+    this.setState({ standingsView: !this.state.standingsView})
+  }
+
   render() {
     console.log('confs', this.state.data, this.state.dataEast)
 
-    const { dataWest, dataEast, isLoading } = this.state;
+    const { dataWest, dataEast, isLoading, standingsView } = this.state;
 
     return (
       <div>
         <ConferenceHead 
-          conf="West"
+          conf="West" 
+          standingsView = {standingsView} 
+          toggleView={this.toggleView}
         />
-        <Standings 
-          conferenceData={ dataWest }
-          isLoading={isLoading}
+        { !standingsView &&
+          <Standings conferenceData={ dataWest } isLoading={isLoading}/>
+        }
+        { standingsView &&
+          <StandingsTable conferenceData={ dataWest } isLoading={isLoading}/>
+        }
+        <ConferenceHead 
+          conf="East" 
+          standingsView = {standingsView}
+          toggleView={this.toggleView}
         />
-        <ConferenceHead conf="East"/>
-        <Standings 
-          conferenceData={ dataEast }
-          isLoading={isLoading}
-        />
+        { !standingsView &&
+          <Standings conferenceData={ dataEast } isLoading={isLoading}/>
+        }
+        { standingsView &&
+          <StandingsTable conferenceData={ dataEast } isLoading={isLoading}/>
+        }
         <Footer/>
       </div>
     );
