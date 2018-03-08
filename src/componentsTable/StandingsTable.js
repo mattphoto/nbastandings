@@ -16,6 +16,8 @@ import {
   WinRateDeltaCell,
   BaseTableCell,
   TableCell,
+  BaseTableHead,
+  TableViewDescription,
 } from '../components/styles';
 
 import {
@@ -42,7 +44,8 @@ export class StandingsTable extends Component {
 
   render() {
 
-    const { conferenceData, isLoading } = this.props;
+    const { conferenceData, isLoading, conf } = this.props;
+    const otherConfTitle = conf === 'West' ? 'East' : "West" ;
 
     if (!conferenceData || isLoading ) {
       return (
@@ -58,27 +61,25 @@ export class StandingsTable extends Component {
         <table 
           style={{ 
             borderCollapse: 'collapse',
-            border: '1px solid #333',
             width: '100%',
           }}>
           <thead>
             <tr>
-              <th colSpan="3" style={{borderBottom: '2px solid black'}}>Team</th>
-              <th style={{borderBottom: '2px solid black'}}>GB</th>
-              <th style={{borderBottom: '2px solid black'}}>PtD</th>
-              <th style={{borderBottom: '2px solid black'}}>Rec</th>
-              <th style={{borderBottom: '2px solid black'}}>L10</th>
-              <th style={{borderBottom: '2px solid black'}}>Hom</th>
-              <th style={{borderBottom: '2px solid black'}}>Awy</th>
-              <th style={{borderBottom: '2px solid black'}}>Con</th>
-              <th style={{borderBottom: '2px solid black'}}>East</th>
-              <th style={{borderBottom: '2px solid black'}}>&lt; 3pts</th>
-
-              <th style={{borderBottom: '2px solid black'}}>FG%</th>
-              <th style={{borderBottom: '2px solid black'}}>Rebs</th>
-              <th style={{borderBottom: '2px solid black'}}>TOVs<br/>bob</th>
-              <th style={{borderBottom: '2px solid black'}}>vs.</th>
-              <th style={{borderBottom: '2px solid black'}}>vs.</th>
+              <BaseTableHead colSpan="3">Team</BaseTableHead>
+              <BaseTableHead style={{textAlign: 'right', width: '50px'}}>GB</BaseTableHead>
+              <BaseTableHead style={{textAlign: 'right', width: '50px',
+                paddingRight: '0'}}
+              >Pts<br/>Dif</BaseTableHead>
+              <BaseTableHead>W&ndash;L</BaseTableHead>
+              <BaseTableHead>Last<br/>10</BaseTableHead>
+              <BaseTableHead>Home</BaseTableHead>
+              <BaseTableHead>Away</BaseTableHead>
+              <BaseTableHead>Conf</BaseTableHead>
+              <BaseTableHead>vs<br/>{otherConfTitle}</BaseTableHead>
+              <BaseTableHead>Games<br/>&lt; 3pts</BaseTableHead>
+              <BaseTableHead>Games<br/>&gt; 10pts</BaseTableHead>
+              <BaseTableHead>vs.<br/>&gt; .500</BaseTableHead>
+              <BaseTableHead>OT</BaseTableHead>
             </tr>
           </thead>
           <tbody>
@@ -97,6 +98,10 @@ export class StandingsTable extends Component {
           )}
           </tbody>
         </table>
+        <TableViewDescription>
+          Color and intensity of cell background indicate the difference between
+          the record in the each cell vs. a team's overall record by percentages.
+        </TableViewDescription>
       </StandingsContainer>
     )
 

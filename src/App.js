@@ -52,14 +52,11 @@ class App extends Component {
 
   }
 
-  
-
   toggleView() {
     this.setState({ standingsView: !this.state.standingsView})
   }
 
   render() {
-    console.log('confs', this.state.data, this.state.dataEast)
 
     const { dataWest, dataEast, isLoading, standingsView } = this.state;
 
@@ -74,7 +71,7 @@ class App extends Component {
           <Standings conferenceData={ dataWest } isLoading={isLoading}/>
         }
         { standingsView &&
-          <StandingsTable conferenceData={ dataWest } isLoading={isLoading}/>
+          <StandingsTable conferenceData={ dataWest } isLoading={isLoading} conf={'West'}/>
         }
         <ConferenceHead 
           conf="East" 

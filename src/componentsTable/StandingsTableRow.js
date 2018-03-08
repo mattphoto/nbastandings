@@ -70,15 +70,24 @@ export class StandingsTableRow extends Component {
           {team.assets[0] }
         </TeamNameCell>
         <RecordCell
-          style={{width: '54px', textAlign: 'right', fontWeight: 600}}
+          style={{
+            width: '54px', 
+            textAlign: 'right',
+            fontFamily: 'Open Sans',
+            fontSize: '18px',
+            fontWeight: 600
+          }}
           hovered={hovered}
           hoveredRow={hoveredRow}
         >
           {team.gamesBack }
         </RecordCell>
         <RecordCell
-          style={{width: '54px', 
-            textAlign: 'right', 
+          style={{
+            width: '54px', 
+            textAlign: 'right',
+            fontFamily: 'Open Sans',
+            fontSize: '17px',
           }}
           hovered={hovered}
           hoveredRow={hoveredRow}
@@ -118,32 +127,22 @@ export class StandingsTableRow extends Component {
         />
         <WinRateTableCell                
           hovered={hovered}
-          hoveredRow={hoveredRow}
-          datum={team.record}
-        />
-        <WinRateTableCell
-          hovered={hovered}
-          datum={team.last10}
+          datum={team.threePts}
           reference={team.percentage}
         />
         <WinRateTableCell
           hovered={hovered}
-          datum={team.vsHome}
+          datum={team.tenPts}
           reference={team.percentage}
         />
         <WinRateTableCell
           hovered={hovered}
-          datum={team.vsAway}
+          datum={team.oppOver500}
           reference={team.percentage}
         />
         <WinRateTableCell
           hovered={hovered}
-          datum={team.confRecord}
-          reference={team.percentage}
-        />
-        <WinRateTableCell
-          hovered={hovered}
-          datum={team.otherConf}
+          datum={team.ot}
           reference={team.percentage}
         />
       </tr>

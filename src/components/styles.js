@@ -302,7 +302,21 @@ export const TableCell = styled.td`
   text-align: right;
   padding-left:  8px;
   border-bottom: 1px solid #CDCDCD;
-  vertical-align: middle;
+  vertical-align: bottom;
+`
+export const BaseTableHead = styled.th`
+  display: table-cell;
+  font-family: 'Open Sans'; 
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #444;
+  text-align: center;
+  padding:  8px;
+  border-bottom: 1px solid #000;
+  vertical-align: bottom;
+  width: 100px;
 `
 export const BaseTableCell = styled.td`
   display: table-cell;
@@ -330,7 +344,6 @@ export const TeamRankCell = BaseTableCell.extend`
     ? '#666'
     : '#AAA'
   };
-  width: 200px;
 `
 export const TeamNameCell = BaseTableCell.extend`
   text-align: left;
@@ -342,8 +355,6 @@ export const TeamNameCell = BaseTableCell.extend`
     ? '#777'
     : '#999'
   };
-
-  width: 200px;
 `
 export const RecordCell = BaseTableCell.extend`
   font-family: 'Inconsolata'; 
@@ -360,6 +371,14 @@ export const WinRateDeltaCell = RecordCell.extend`
     ? 600
     : 400
   };
+`
+export const TableViewDescription = styled.div`
+  display: flex;
+  justify-content; center;
+  margin: 0 auto;
+  font-size: 13px;
+  padding: 8px;
+  background-color: #EEE;
 `
 export const FooterContainer = styled.div`
   display: flex;

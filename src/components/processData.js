@@ -25,29 +25,20 @@ export default function ( data, conf ) {
   for (let i=0 ; i < filteredData.length; i++ ) {
     let teamObj = {};
 
-
     teamObj.confRecord = filteredData[i][6];
     teamObj.otherConf = filteredData[i][otherConfIndex]
-    // teamObj.vsEast = filteredData[i][59];
-    // teamObj.vsWest = filteredData[i][63];
     teamObj.vsHome = filteredData[i][17];
     teamObj.vsAway = filteredData[i][18];
     teamObj.last10 = filteredData[i][19];
     teamObj.last10Home = filteredData[i][20];
     teamObj.last10Away = filteredData[i][21];
     teamObj.percentage = filteredData[i][14];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
-    // teamObj.city = filteredData[i][3];
+    teamObj.threePts = filteredData[i][23];
+    teamObj.tenPts = filteredData[i][24];
+    teamObj.oppOver500 = filteredData[i][52];
+    teamObj.ot = filteredData[i][22];
     teamObj.city = filteredData[i][3];
     teamObj.ptsDiff = filteredData[i][58];
-
-
-
-    teamObj.city = filteredData[i][3];
     teamObj.name = filteredData[i][4];
     teamObj.record = filteredData[i][16];
     teamObj.gamesBack = filteredData[i][37];
