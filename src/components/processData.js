@@ -24,6 +24,11 @@ export default function ( data, conf ) {
 
   for (let i=0 ; i < filteredData.length; i++ ) {
     let teamObj = {};
+    let teamName = ( filteredData[i][4] !== "Trail Blazers")
+      ? filteredData[i][4]
+      : 'blazers';
+
+      console.log('filteredData[i][4]', filteredData[i][4], teamName)
 
     teamObj.confRecord = filteredData[i][6];
     teamObj.otherConf = filteredData[i][otherConfIndex]
@@ -39,7 +44,7 @@ export default function ( data, conf ) {
     teamObj.ot = filteredData[i][22];
     teamObj.city = filteredData[i][3];
     teamObj.ptsDiff = filteredData[i][58];
-    teamObj.name = filteredData[i][4];
+    teamObj.name = teamName;
     teamObj.record = filteredData[i][16];
     teamObj.gamesBack = filteredData[i][37];
     teamObj.zindex = 16 - filteredData[i][7];
@@ -71,17 +76,17 @@ export default function ( data, conf ) {
     teamObj.left = currentLeftPosition;
     conference.push(teamObj)
 
-    console.log( 'standings', teamObj.assets[0], 
-      teamObj.confRecord, teamObj.otherConf, 
-      'home', teamObj.vsHome,
-      'away', teamObj.vsAway,
-      teamObj.last10,
-      teamObj.last10Home,
-      teamObj.last10Away,
+    // console.log( 'standings', teamObj.assets[0], 
+    //   teamObj.confRecord, teamObj.otherConf, 
+    //   'home', teamObj.vsHome,
+    //   'away', teamObj.vsAway,
+    //   teamObj.last10,
+    //   teamObj.last10Home,
+    //   teamObj.last10Away,
 
 
 
-      );
+    //   );
 
   }
   return conference;

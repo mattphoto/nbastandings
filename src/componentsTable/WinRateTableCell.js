@@ -23,7 +23,6 @@ export class WinRateTableCell extends Component {
   return (
     <WinRateDeltaCell 
       bgColor={getBackgroundColor(datum, reference)}
-      fontColor={''}
       fontWeight={Math.abs(calculateDelta(datum, reference))}
       hovered={hovered}
     >

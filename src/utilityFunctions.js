@@ -24,7 +24,14 @@ export const calculateDelta = ( winLossString, reference ) => {
 }
 
 export const getBackgroundColor = ( winLossString, reference ) => {
-  let winDelta = calculateDelta( winLossString, reference);
+  let winLoss = winLossString;
+  let smallSampleFactor = 1;
+  // if (winLossString.trim() === '1-0') {
+  //   smallSampleFactor = 2;
+  // } else if (winLossString.trim() === '0-1') {
+  //   smallSampleFactor = 0.5;
+  // }
+  let winDelta = calculateDelta( winLoss, reference * smallSampleFactor);
   if ( winDelta > 0 ) {
     winDelta = winDelta > upperClip ? upperClip : winDelta;
     return blueGrade[winDelta];

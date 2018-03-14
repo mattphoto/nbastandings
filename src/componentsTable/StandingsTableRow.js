@@ -67,7 +67,12 @@ export class StandingsTableRow extends Component {
           hoveredRow={hoveredRow}
           rank={index}
         >
+          <a href={ "http://www.nba.com/" 
+            + team.name.toLowerCase()}
+            target="_blank"
+          >
           {team.assets[0] }
+          </a>
         </TeamNameCell>
         <RecordCell
           style={{

@@ -41,6 +41,7 @@ export const teamAssets = {
   "Timberwolves": [ "MIN", "#002B5C", "#7AC143", MIN],
   "Thunder": [ "OKC", "#007AC1", "#F05133", OKC],
   "Trail Blazers": [ "POR", "#E13A3E", "#C4CED4", POR],
+  "blazers": [ "POR", "#E13A3E", "#C4CED4", POR],
   "Pelicans": [ "NOP", "#B4975A", "#002B5C", NOP],
   "Clippers": [ "LAC", "#ED174C", "#006BB6", LAC],
   "Nuggets": [ "DEN", "#5091CD", "#FDB927", DEN],

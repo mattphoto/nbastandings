@@ -62,13 +62,18 @@ export class StandingsTable extends Component {
           style={{ 
             borderCollapse: 'collapse',
             width: '100%',
+            overflowX: 'auto'
           }}>
           <thead>
             <tr>
               <BaseTableHead colSpan="3">Team</BaseTableHead>
               <BaseTableHead style={{textAlign: 'right', width: '50px'}}>GB</BaseTableHead>
-              <BaseTableHead style={{textAlign: 'right', width: '50px',
-                paddingRight: '0'}}
+              <BaseTableHead 
+                style={{
+                  textAlign: 'right', 
+                  width: '50px',
+                  paddingRight: '0'
+                }}
               >Pts<br/>Dif</BaseTableHead>
               <BaseTableHead>W&ndash;L</BaseTableHead>
               <BaseTableHead>Last<br/>10</BaseTableHead>
@@ -100,7 +105,8 @@ export class StandingsTable extends Component {
         </table>
         <TableViewDescription>
           Color and intensity of cell background indicate the difference between
-          the record in the each cell vs. a team's overall record by percentages.
+          the win loss record in the each cell vs. a team's overall record by 
+          percentages.
         </TableViewDescription>
       </StandingsContainer>
     )

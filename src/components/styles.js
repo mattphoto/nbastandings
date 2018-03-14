@@ -6,6 +6,7 @@ import {
   gamesBackRowHeight,
   teamTitleWidth,
   leftMargin,
+  breakPoint,
 } from './constants';
 
 export const PlayoffTeamsContainer = styled.div`
@@ -77,7 +78,7 @@ export const LoadingScreen = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (max-width: 750px) {
+  @media (max-width: ${breakPoint}px) {
     display: none;
   }
 `
@@ -87,7 +88,7 @@ export const StandingsContainer = styled.div`
   margin 0 auto;
   border: 1px solid #DDD;
   margin-bottom: ${gamesBackRowHeight}px;
-  @media (max-width: 750px) {
+  @media (max-width: ${breakPoint}px) {
     display: none;
   }
 `
@@ -220,6 +221,9 @@ export const ConferenceHeader = styled.div`
   color: #FFF;
   background: ${props => props.confBGColor};
   margin-bottom: 4px;
+  @media (max-width: ${breakPoint}px) {
+    display: none;
+  }
 `
 export const ConferenceHeadButton = styled.a`
   position: absolute;
@@ -389,6 +393,9 @@ export const FooterContainer = styled.div`
   margin-bottom: 18px;
   padding: 20px;
   background: #DDD;
+  @media (max-width: ${breakPoint}px) {
+    flex-direction: column;
+  }
 `
 export const FooterColumn = styled.div`
   display: flex;
@@ -401,6 +408,30 @@ export const FooterColumn = styled.div`
   color: #777;
   font-size: 14px;
   font-weight: 600;
+  @media (max-width: ${breakPoint}px) {
+    display: ${props => props.hideMobile && 'none'}
+  }
+`
+export const DesktopMessage = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: #777;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px;
+  background-color: #FFF;
+  margin: 20px 0;
+  @media (min-width: ${breakPoint}px) {
+    display: none;
+  }
+  & p {
+    margin 0 0 10px 0;
+  }
+  & p:last-child {
+    margin-bottom: 0px;
+  };
+}
+
 `
 export const FooterHeader = styled.div`
   color: #999;
@@ -417,6 +448,10 @@ export const FooterLink = styled.div`
   color: #666;
   font-size: 14px;
   margin-bottom: 6px;
+  @media (max-width: ${breakPoint}px) {
+
+    display: ${props => props.hideMobile && 'none'}
+  }
 `
 
 // .reverse().map(function(...

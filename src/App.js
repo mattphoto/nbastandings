@@ -18,7 +18,7 @@ class App extends Component {
       dataWest: [],
       dataEast: [],
       isLoading: true,
-      standingsView: true,
+      standingsView: false,
     };
     ReactGA.initialize('UA-113355224-1');
     ReactGA.pageview(window.location.pathname);
@@ -41,14 +41,21 @@ class App extends Component {
         })
       }.bind(this))
 
-    NBA.stats.boxScore({GameID: "0021401082"})
-      .then( results => {
-        return results.resultSets[0];
-      })
-      .then( function (data) {
+    // NBA.stats.boxScore({GameID: "0021700976"})
+    //   .then( results => {
+    //     return results;
+    //   })
+    //   .then( function (data) {
+    //     console.log('BOXSCORE', data);
+    //   }.bind(this))
 
-        console.log('BOXSCORE', data);
-      }.bind(this))
+    // NBA.stats.scoreboard({gameDate: "03/12/2018"})
+    //   .then( results => {
+    //     return results;
+    //   })
+    //   .then( function (data) {
+    //     console.log('BOXSCORE', data);
+    //   }.bind(this))
 
   }
 
@@ -63,17 +70,6 @@ class App extends Component {
     return (
       <div>
         <ConferenceHead 
-          conf="West" 
-          standingsView = {standingsView} 
-          toggleView={this.toggleView}
-        />
-        { !standingsView &&
-          <Standings conferenceData={ dataWest } isLoading={isLoading}/>
-        }
-        { standingsView &&
-          <StandingsTable conferenceData={ dataWest } isLoading={isLoading} conf={'West'}/>
-        }
-        <ConferenceHead 
           conf="East" 
           standingsView = {standingsView}
           toggleView={this.toggleView}
@@ -83,6 +79,17 @@ class App extends Component {
         }
         { standingsView &&
           <StandingsTable conferenceData={ dataEast } isLoading={isLoading}/>
+        }
+        <ConferenceHead 
+          conf="West" 
+          standingsView = {standingsView} 
+          toggleView={this.toggleView}
+        />
+        { !standingsView &&
+          <Standings conferenceData={ dataWest } isLoading={isLoading}/>
+        }
+        { standingsView &&
+          <StandingsTable conferenceData={ dataWest } isLoading={isLoading} conf={'West'}/>
         }
         <Footer/>
       </div>

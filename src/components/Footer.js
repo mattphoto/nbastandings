@@ -6,6 +6,7 @@ import {
   FooterColumn,
   FooterHeader,
   FooterLink,
+  DesktopMessage,
 } from './styles';
 
 export class Footer extends Component {
@@ -15,10 +16,14 @@ export class Footer extends Component {
       <FooterContainer >
         <FooterColumn space>
           <FooterLogo>bballstandings.com</FooterLogo>
-          <FooterLink>
+          <FooterLink hideMobile>
             <a href="mailto:bball@rueif.com">contact</a>
           </FooterLink>
         </FooterColumn>
+        <DesktopMessage>
+          <p>bballstandings.com is a visualization of nba standings optimized for desktop.</p>
+          <p>Please open the site on your computer. Thank you.</p>
+        </DesktopMessage>
         <FooterColumn>
         </FooterColumn>
         <FooterColumn>
@@ -54,7 +59,7 @@ export class Footer extends Component {
             </a>
           </FooterLink>
         </FooterColumn>
-        <FooterColumn>
+        <FooterColumn hideMobile>
           <FooterHeader>colophon</FooterHeader>
           <FooterLink>
             <a href="https://github.com/facebook/create-react-app" target="_blank" rel="noopener noreferrer">
