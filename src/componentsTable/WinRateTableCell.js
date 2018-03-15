@@ -20,10 +20,17 @@ export class WinRateTableCell extends Component {
     hovered,
   } = this.props;
 
+  let bgColorCalc = getBackgroundColor(datum, reference);
+  let fontWeightCalc = Math.abs(calculateDelta(datum, reference));
+  if ( datum.trim() === '0-1' || datum.trim() === '1-0') { 
+    bgColorCalc = '#F7F7F7';
+    fontWeightCalc = 0;
+  }
+
   return (
     <WinRateDeltaCell 
-      bgColor={getBackgroundColor(datum, reference)}
-      fontWeight={Math.abs(calculateDelta(datum, reference))}
+      bgColor={bgColorCalc}
+      fontWeight={fontWeightCalc}
       hovered={hovered}
     >
       {datum}

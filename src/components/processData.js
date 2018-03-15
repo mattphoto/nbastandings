@@ -24,11 +24,10 @@ export default function ( data, conf ) {
 
   for (let i=0 ; i < filteredData.length; i++ ) {
     let teamObj = {};
+    
     let teamName = ( filteredData[i][4] !== "Trail Blazers")
       ? filteredData[i][4]
       : 'blazers';
-
-      console.log('filteredData[i][4]', filteredData[i][4], teamName)
 
     teamObj.confRecord = filteredData[i][6];
     teamObj.otherConf = filteredData[i][otherConfIndex]
