@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
 
 import loadingIcon from '../assets/loading.svg';
-import { WinRateTableCell } from './WinRateTableCell';
 import { StandingsTableRow } from './StandingsTableRow';
-
-import {
-  processWinLoss, 
-  calculateWLPercentage,
-  calculateDelta,
-} from '../utilityFunctions';
 
 import {
   StandingsContainer,
   LoadingScreen,
-  WinRateDeltaCell,
-  BaseTableCell,
-  TableCell,
   BaseTableHead,
   TableViewDescription,
 } from '../components/styles';

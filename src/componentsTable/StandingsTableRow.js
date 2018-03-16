@@ -1,20 +1,11 @@
 import React, { Component } from 'react';
 
-import loadingIcon from '../assets/loading.svg';
 import { WinRateTableCell } from './WinRateTableCell';
 
 import {
-  processWinLoss, 
-  calculateWLPercentage,
-  calculateDelta,
-} from '../utilityFunctions';
-
-import {
-  WinRateDeltaCell,
   TeamRankCell,
   BaseTableCell,
   TeamNameCell,
-  TableCell,
   RecordCell,
 } from '../components/styles';
 

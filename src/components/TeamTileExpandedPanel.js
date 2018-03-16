@@ -20,7 +20,6 @@ export class TeamTileExpandedPanel extends Component {
       feb,
       mar,
       apr,
-      last10,
     } = this.props;
 
     return (
