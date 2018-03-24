@@ -64,7 +64,7 @@ export class StandingsTable extends Component {
                   width: '50px',
                   paddingRight: '0'
                 }}
-              >Pts<br/>Dif</BaseTableHead>
+              >Pt.<br/>Dif</BaseTableHead>
               <BaseTableHead>W&ndash;L</BaseTableHead>
               <BaseTableHead>Last<br/>10</BaseTableHead>
               <BaseTableHead>Home</BaseTableHead>
