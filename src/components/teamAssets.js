@@ -62,6 +62,7 @@ export const teamAssets = {
   "Bucks": [ "MIL", "#00471B", "#EEE1C6", MIL],
   "Pacers": [ "IND", "#FDBB30", "#002D62", IND],
   "76ers": [ "PHI", "#006BB6", "#ED174C", PHI],
+  "sixers": [ "PHI", "#006BB6", "#ED174C", PHI],
   "Pistons": [ "DET", "#ED174C", "#0067B1", DET],
   "Knicks": [ "NYK", "#F58426", "#006BB6", NYK],
   "Hornets": [ "CHA", "#00788C", "#1D1160", CHA],

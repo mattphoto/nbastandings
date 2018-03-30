@@ -24,10 +24,15 @@ export default function ( data, conf ) {
 
   for (let i=0 ; i < filteredData.length; i++ ) {
     let teamObj = {};
-    
-    let teamName = ( filteredData[i][4] !== "Trail Blazers")
-      ? filteredData[i][4]
-      : 'blazers';
+    let teamName = '';
+
+    if ( filteredData[i][4] === "Trail Blazers" ) {
+      teamName = 'blazers'
+    } else if ( filteredData[i][4] === "76ers" ) {
+      teamName = 'sixers'
+    } else {
+      teamName = filteredData[i][4]
+    }
 
     teamObj.confRecord = filteredData[i][6];
     teamObj.otherConf = filteredData[i][otherConfIndex]

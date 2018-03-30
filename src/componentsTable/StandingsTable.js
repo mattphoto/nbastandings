@@ -70,7 +70,7 @@ export class StandingsTable extends Component {
               <BaseTableHead>Home</BaseTableHead>
               <BaseTableHead>Away</BaseTableHead>
               <BaseTableHead>Conf</BaseTableHead>
-              <BaseTableHead>vs<br/>{otherConfTitle}</BaseTableHead>
+              <BaseTableHead>vs.<br/>{otherConfTitle}</BaseTableHead>
               <BaseTableHead>Games<br/>&lt; 3pts</BaseTableHead>
               <BaseTableHead>Games<br/>&gt; 10pts</BaseTableHead>
               <BaseTableHead>vs.<br/>&gt; .500</BaseTableHead>
