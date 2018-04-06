@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { WinRateTableCell } from './WinRateTableCell';
 
+import { padZero } from '../utilityFunctions';
+
 import {
   TeamRankCell,
   BaseTableCell,
@@ -53,7 +55,7 @@ export class StandingsTableRow extends Component {
             alt=""
           />
         </BaseTableCell>
-        <TeamNameCell style={{width: '44px'}}                
+        <TeamNameCell style={{width: '60px'}}                
           hovered={hovered}
           hoveredRow={hoveredRow}
           rank={index}
@@ -68,7 +70,6 @@ export class StandingsTableRow extends Component {
         <RecordCell
           style={{
             width: '54px', 
-            textAlign: 'right',
             fontFamily: 'Open Sans',
             fontSize: '18px',
             fontWeight: 600
@@ -76,11 +77,11 @@ export class StandingsTableRow extends Component {
           hovered={hovered}
           hoveredRow={hoveredRow}
         >
-          {team.gamesBack }
+          {padZero(team.gamesBack)}
         </RecordCell>
         <RecordCell
           style={{
-            width: '54px', 
+            width: '34px', 
             textAlign: 'right',
             fontFamily: 'Open Sans',
             fontSize: '17px',
@@ -88,7 +89,7 @@ export class StandingsTableRow extends Component {
           hovered={hovered}
           hoveredRow={hoveredRow}
         >
-          {team.ptsDiff }
+          {padZero(team.ptsDiff)}
         </RecordCell>
         <RecordCell
           hovered={hovered}

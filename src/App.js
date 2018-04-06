@@ -18,7 +18,7 @@ class App extends Component {
       dataWest: [],
       dataEast: [],
       isLoading: true,
-      standingsView: false,
+      standingsView: true,
     };
     ReactGA.initialize('UA-113355224-1');
     ReactGA.pageview(window.location.pathname);
@@ -30,7 +30,8 @@ class App extends Component {
     NBA.stats.leagueStandings()
       .then( results => {
         return results.resultSets[0];
-      }).then( function (data) {
+      })
+      .then( function (data) {
         this.setState( function () {
           return {
             dataWest: processData(data, "West"),

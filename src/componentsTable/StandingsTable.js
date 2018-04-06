@@ -57,15 +57,15 @@ export class StandingsTable extends Component {
           <thead>
             <tr>
               <BaseTableHead colSpan="3">Team</BaseTableHead>
-              <BaseTableHead style={{textAlign: 'right', width: '50px'}}>GB</BaseTableHead>
+              <BaseTableHead style={{width: '50px'}}>GB</BaseTableHead>
               <BaseTableHead 
                 style={{
                   textAlign: 'right', 
-                  width: '50px',
+                  width: '30px',
                   paddingRight: '0'
                 }}
               >Pt.<br/>Dif</BaseTableHead>
-              <BaseTableHead>W&ndash;L</BaseTableHead>
+              <BaseTableHead style={{width: '85px'}}>W&ndash;L</BaseTableHead>
               <BaseTableHead>Last<br/>10</BaseTableHead>
               <BaseTableHead>Home</BaseTableHead>
               <BaseTableHead>Away</BaseTableHead>

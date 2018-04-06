@@ -35,3 +35,13 @@ export const getBackgroundColor = ( winLossString, reference ) => {
     return redGrade[Math.abs(winDelta)];
   }
 }
+
+export const padZero = ( numberToPad ) => {
+  let paddedNumber;
+  if (numberToPad % 1 !== 0) {
+    paddedNumber = numberToPad;
+  } else {
+    paddedNumber = numberToPad === 0 ? 0 : numberToPad + '.0';
+  }
+  return paddedNumber
+}
