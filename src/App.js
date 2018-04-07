@@ -41,23 +41,6 @@ class App extends Component {
           }
         })
       }.bind(this))
-
-    // NBA.stats.boxScore({GameID: "0021700976"})
-    //   .then( results => {
-    //     return results;
-    //   })
-    //   .then( function (data) {
-    //     console.log('BOXSCORE', data);
-    //   }.bind(this))
-
-    // NBA.stats.scoreboard({gameDate: "03/12/2018"})
-    //   .then( results => {
-    //     return results;
-    //   })
-    //   .then( function (data) {
-    //     console.log('BOXSCORE', data);
-    //   }.bind(this))
-
   }
 
   toggleView() {

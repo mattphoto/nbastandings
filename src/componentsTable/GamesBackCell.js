@@ -1,22 +1,8 @@
-
-
-// export const getBackgroundColor = ( winLossString, reference ) => {
-//   let winLoss = winLossString;
-//   let smallSampleFactor = 1;
-//   let winDelta = calculateDelta( winLoss, reference * smallSampleFactor);
-//   if ( winDelta > 0 ) {
-//     winDelta = winDelta > upperClip ? upperClip : winDelta;
-//     return blueGrade[winDelta];
-//   } else {
-//     winDelta = winDelta < lowerClip ? lowerClip : winDelta;
-//     return redGrade[Math.abs(winDelta)];
-//   }
-// }
-
 import React, { Component } from 'react';
 
 import {
   calcGBBackgroundColor,
+  padZero,
 } from '../utilityFunctions';
 
 import {
@@ -39,7 +25,7 @@ export class GamesBackCell extends Component {
       bgColor={ calcGBBackgroundColor( datum, midGB, lastGB ) }
       hovered={hovered}
     >
-      {datum}
+      { padZero(datum) }
     </GamesBackCellStyle>
   )
   }

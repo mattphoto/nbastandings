@@ -71,9 +71,7 @@ export class StandingsTableRow extends Component {
           datum={team.gamesBack}
           hovered={hovered}
           {...this.props}
-        >
-          {padZero(team.gamesBack)}
-        </GamesBackCell>
+        />
         <RecordCell
           style={{
             width: '34px', 

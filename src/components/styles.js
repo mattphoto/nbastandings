@@ -344,7 +344,7 @@ export const GamesBackCellStyle= styled.td`
   padding:  3px 0px;
   vertical-align: middle;
   color: #333;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   border-bottom: ${props => props.hovered 
     ? '1px solid #000'
