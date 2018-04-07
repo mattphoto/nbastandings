@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { WinRateTableCell } from './WinRateTableCell';
-
+import { GamesBackCell } from './GamesBackCell';
 import { padZero } from '../utilityFunctions';
 
 import {
@@ -10,11 +10,6 @@ import {
   TeamNameCell,
   RecordCell,
 } from '../components/styles';
-
-import {
-
-} from '../components/styles';
-
 
 export class StandingsTableRow extends Component {
 
@@ -25,7 +20,7 @@ export class StandingsTableRow extends Component {
       hoverOutTeamRow,
       team,
       index,
-      hoveredIndex
+      hoveredIndex,
     } = this.props;
 
     const hovered = (index === hoveredIndex || index + 1 === hoveredIndex);
@@ -67,18 +62,18 @@ export class StandingsTableRow extends Component {
           {team.assets[0] }
           </a>
         </TeamNameCell>
-        <RecordCell
+        <GamesBackCell
           style={{
-            width: '54px', 
             fontFamily: 'Open Sans',
             fontSize: '18px',
             fontWeight: 600
           }}
+          datum={team.gamesBack}
           hovered={hovered}
-          hoveredRow={hoveredRow}
+          {...this.props}
         >
           {padZero(team.gamesBack)}
-        </RecordCell>
+        </GamesBackCell>
         <RecordCell
           style={{
             width: '34px', 

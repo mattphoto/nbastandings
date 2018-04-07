@@ -339,6 +339,24 @@ export const BaseTableCell = styled.td`
     : '#FFF'
   };
 `
+export const GamesBackCellStyle= styled.td`
+  display: table-cell;
+  padding:  3px 0px;
+  vertical-align: middle;
+  color: #333;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: ${props => props.hovered 
+    ? '1px solid #000'
+    : '1px solid #cdcdcd'
+  };
+  border-right: ${props => props.rightBorder 
+    ? '1px solid #000'
+    : ''
+  };
+  background-color: ${props => props.bgColor};
+
+`
 export const TeamRankCell = BaseTableCell.extend`
   text-align: right;
   font-family: 'Open Sans';

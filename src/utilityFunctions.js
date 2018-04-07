@@ -36,6 +36,18 @@ export const getBackgroundColor = ( winLossString, reference ) => {
   }
 }
 
+export const calcGBBackgroundColor = ( gamesBack, midGB, lastGB ) => {
+  const lowerRange = midGB - lastGB;
+  const upperColorLookUp = Math.round( ( midGB - gamesBack ) * 22 / midGB + 3  ) - 1
+  const lowerColorLookUp = Math.round( ( midGB - gamesBack ) * 22 / lowerRange + 3 ) - 1
+  // console.log('gamesBack', gamesBack, upperColorLookUp, lowerColorLookUp)
+  if ( gamesBack < midGB ) {
+    return blueGrade[upperColorLookUp];
+  } else {
+    return redGrade[Math.abs(lowerColorLookUp)];
+  }
+}
+
 export const padZero = ( numberToPad ) => {
   let paddedNumber;
   if (numberToPad % 1 !== 0) {

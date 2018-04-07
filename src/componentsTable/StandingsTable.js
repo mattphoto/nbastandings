@@ -10,11 +10,6 @@ import {
   TableViewDescription,
 } from '../components/styles';
 
-import {
-
-} from '../components/styles';
-
-
 export class StandingsTable extends Component {
 
   constructor(props) {
@@ -45,6 +40,9 @@ export class StandingsTable extends Component {
         </LoadingScreen>
       );
     }
+
+    const midGB = ( conferenceData[8].gamesBack + conferenceData[7].gamesBack ) / 2
+    const lastGB = conferenceData[14].gamesBack
 
     return (
       <StandingsContainer >
@@ -87,6 +85,8 @@ export class StandingsTable extends Component {
                 team={ team }
                 index={ index }
                 hoveredIndex={ this.state.hoveredIndex }
+                midGB={ midGB }
+                lastGB={ lastGB }
                 key={ index+'str'}
               />
             )
@@ -96,7 +96,7 @@ export class StandingsTable extends Component {
         <TableViewDescription>
           Color and intensity of cell background indicate the difference between
           the win loss record in the each cell vs. a team's overall record by 
-          percentages.
+          percentage.
         </TableViewDescription>
       </StandingsContainer>
     )
