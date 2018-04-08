@@ -63,8 +63,8 @@ export class StandingsTable extends Component {
                   paddingRight: '0'
                 }}
               >Pt.<br/>Dif</BaseTableHead>
-              <BaseTableHead style={{width: '85px'}}>W&ndash;L</BaseTableHead>
-              <BaseTableHead>Last<br/>10</BaseTableHead>
+              <BaseTableHead style={{width: '92px'}}>W&ndash;L</BaseTableHead>
+              <BaseTableHead style={{width: '68px'}}>Last<br/>10</BaseTableHead>
               <BaseTableHead>Home</BaseTableHead>
               <BaseTableHead>Away</BaseTableHead>
               <BaseTableHead>Conf</BaseTableHead>
@@ -72,7 +72,7 @@ export class StandingsTable extends Component {
               <BaseTableHead>Games<br/>&lt; 3pts</BaseTableHead>
               <BaseTableHead>Games<br/>&gt; 10pts</BaseTableHead>
               <BaseTableHead>vs.<br/>&gt; .500</BaseTableHead>
-              <BaseTableHead>OT</BaseTableHead>
+              <BaseTableHead style={{width: '68px'}}>OT</BaseTableHead>
             </tr>
           </thead>
           <tbody>
