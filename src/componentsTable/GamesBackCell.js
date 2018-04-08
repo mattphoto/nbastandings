@@ -21,8 +21,8 @@ export class GamesBackCell extends Component {
   } = this.props;
 
   return (
-    <GamesBackCellStyle 
-      bgColor={ calcGBBackgroundColor( datum, midGB, lastGB ) }
+    <GamesBackCellStyle
+      bgColor={calcGBBackgroundColor( datum, midGB, lastGB )}
       hovered={hovered}
     >
       { padZero(datum) }

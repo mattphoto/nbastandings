@@ -63,11 +63,6 @@ export class StandingsTableRow extends Component {
           </a>
         </TeamNameCell>
         <GamesBackCell
-          style={{
-            fontFamily: 'Open Sans',
-            fontSize: '18px',
-            fontWeight: 600
-          }}
           datum={team.gamesBack}
           hovered={hovered}
           {...this.props}
