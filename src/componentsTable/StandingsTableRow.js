@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { WinRateTableCell } from './WinRateTableCell';
 import { GamesBackCell } from './GamesBackCell';
 import { padZero } from '../utilityFunctions';
+import { CURRENT_SEASON } from '../components/constants';
 
 import {
   TeamRankCell,
@@ -85,11 +86,13 @@ export class StandingsTableRow extends Component {
         >
           {team.record}
         </RecordCell>
+        { CURRENT_SEASON === '2018-19' &&
         <WinRateTableCell
           hovered={hovered}
           datum={team.last10}
           reference={team.percentage}
         />
+        }
         <WinRateTableCell
           hovered={hovered}
           datum={team.vsHome}

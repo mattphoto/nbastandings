@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import loadingIcon from '../assets/loading.svg';
 import { StandingsTableRow } from './StandingsTableRow';
+import { CURRENT_SEASON } from '../components/constants';
 
 import {
   StandingsContainer,
@@ -64,7 +65,9 @@ export class StandingsTable extends Component {
                 }}
               >Pt.<br/>Dif</BaseTableHead>
               <BaseTableHead style={{width: '92px'}}>W&ndash;L</BaseTableHead>
+              { CURRENT_SEASON === '2018-19' &&
               <BaseTableHead style={{width: '68px'}}>Last<br/>10</BaseTableHead>
+              }
               <BaseTableHead>Home</BaseTableHead>
               <BaseTableHead>Away</BaseTableHead>
               <BaseTableHead>Conf</BaseTableHead>

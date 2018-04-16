@@ -1,14 +1,10 @@
 import { blueGrade, redGrade, upperClip, lowerClip } from './components/constants';
 
 export const processWinLoss = ( winLossString ) => {
-
   if (Array.isArray(winLossString)) { return [0,0]}
-
   let winLossArray = winLossString.replace(/\s+/g, '').split('-');
-
   winLossArray[0] = parseInt(winLossArray[0], 10);
   winLossArray[1] = parseInt(winLossArray[1], 10);
-
   return winLossArray;
 }
 
@@ -42,7 +38,6 @@ export const calcGBBackgroundColor = ( gamesBack, midGB, lastGB ) => {
     midGB - gamesBack === 0 ? 0 : Math.round( ( midGB - gamesBack ) * 22 / midGB + 3  ) - 1
   const lowerColorLookUp = 
     midGB - gamesBack === 0 ? 0 : Math.round( ( midGB - gamesBack ) * 22 / lowerRange + 3 ) - 1
-  // console.log('gamesBack', gamesBack, upperColorLookUp, lowerColorLookUp)
   if ( gamesBack < midGB ) {
     return blueGrade[upperColorLookUp];
   } else {

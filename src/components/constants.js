@@ -10,6 +10,8 @@ export const teamTitleWidth = (mainContainerWidth - leftMargin * 2) / 4;
 export const leftPositionIncrement = teamTitleWidth;
 export const WLDotsHeight = gamesBackRowHeight - 4;
 
+export const CURRENT_SEASON = '2017-18';
+
 export const redGrade = [
   "rgb(255,255,255)",
   "rgb(255,253,253)",

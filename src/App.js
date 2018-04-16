@@ -19,15 +19,23 @@ class App extends Component {
       dataEast: [],
       isLoading: true,
       standingsView: true,
+      currentSeason: '2017-18'
     };
     ReactGA.initialize('UA-113355224-1');
     ReactGA.pageview(window.location.pathname);
 
     this.toggleView = this.toggleView.bind(this);
+    this.changeSeason = this.changeSeason.bind(this);
+    this.loadSeason = this.loadSeason.bind(this);
   }
 
   componentDidMount() {
-    NBA.stats.leagueStandings()
+    this.loadSeason();
+  }
+
+  loadSeason() {
+    console.log('loadseason', this.state.currentSeason)
+    NBA.stats.leagueStandings({Season: this.state.currentSeason})
       .then( results => {
         return results.resultSets[0];
       })
@@ -44,19 +52,30 @@ class App extends Component {
   }
 
   toggleView() {
-    this.setState({ standingsView: !this.state.standingsView})
+    this.setState({ standingsView: !this.state.standingsView })
+  }
+
+  changeSeason(event) {
+    this.setState(
+      { 
+        currentSeason: event.target.value,
+        isLoading: true 
+      }, 
+    () => {this.loadSeason(this.state.currentSeason)}
+    )
   }
 
   render() {
 
-    const { dataWest, dataEast, isLoading, standingsView } = this.state;
-
+    const { dataWest, dataEast, isLoading, standingsView, currentSeason } = this.state;
     return (
       <div>
         <ConferenceHead 
           conf="East" 
           standingsView = {standingsView}
           toggleView={this.toggleView}
+          currentSeason={currentSeason}
+          changeSeason={this.changeSeason}
         />
         { !standingsView &&
           <Standings conferenceData={ dataEast } isLoading={isLoading}/>
@@ -68,6 +87,8 @@ class App extends Component {
           conf="West" 
           standingsView = {standingsView} 
           toggleView={this.toggleView}
+          currentSeason={currentSeason}
+          changeSeason={this.changeSeason}
         />
         { !standingsView &&
           <Standings conferenceData={ dataWest } isLoading={isLoading}/>

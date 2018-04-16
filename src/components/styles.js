@@ -248,6 +248,22 @@ export const ConferenceHeadButton = styled.a`
     color: #000;
   }
 `
+export const SeasonSelect = styled.select`
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: 24px;
+  background-color: #EFEFEF;
+  border-radius: 3px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  user-select: none;
+  &: hover {
+    background-color: #FFF;
+    color: #000;
+  }
+`
 export const StreaksContainer = styled.div`
   position: absolute;
   top: 2px;
