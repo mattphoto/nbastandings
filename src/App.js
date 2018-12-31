@@ -18,8 +18,8 @@ class App extends Component {
       dataWest: [],
       dataEast: [],
       isLoading: true,
-      standingsView: true,
-      currentSeason: '2017-18'
+      standingsView: false,
+      currentSeason: '2018-19'
     };
     ReactGA.initialize('UA-113355224-1');
     ReactGA.pageview(window.location.pathname);
@@ -48,7 +48,8 @@ class App extends Component {
             isLoading: false,
           }
         })
-      }.bind(this))
+      }.bind(this)
+    )
   }
 
   toggleView() {
