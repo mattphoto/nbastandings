@@ -1,7 +1,7 @@
 export const leftMargin = 42;
 export const mainContainerWidth = 1200;
-export const gamesBackRowFactor = 2;  // 3 []
-export const gamesBackRowHeight = 32; // 18 20 (24 2)
+export const gamesBackRowFactor = 3; // 3 []
+export const gamesBackRowHeight = 22; // 18 20 (24 2) 32/2
 export const breakPoint = 750;
 export const upperClip = 24;
 export const lowerClip = -24;
@@ -10,7 +10,7 @@ export const teamTitleWidth = (mainContainerWidth - leftMargin * 2) / 4;
 export const leftPositionIncrement = teamTitleWidth;
 export const WLDotsHeight = gamesBackRowHeight - 4;
 
-export const CURRENT_SEASON = '2018-19';
+export const CURRENT_SEASON = "2018-19";
 
 export const redGrade = [
   "rgb(255,255,255)",
@@ -41,7 +41,7 @@ export const redGrade = [
   "rgb(255,130,130)",
   "rgb(255,120,120)",
   "rgb(255,110,110)",
-  "rgb(255,100,100)",
+  "rgb(255,100,100)"
 ];
 
 export const blueGrade = [
@@ -73,5 +73,5 @@ export const blueGrade = [
   "rgb(76,152,255)",
   "rgb(72,144,255)",
   "rgb(68,136,255)",
-  "rgb(64,128,255)",
+  "rgb(64,128,255)"
 ];
