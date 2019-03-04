@@ -1,7 +1,7 @@
 export const leftMargin = 42;
 export const mainContainerWidth = 1200;
 export const gamesBackRowFactor = 3; // 3 []
-export const gamesBackRowHeight = 22; // 18 20 (24 2) 32/2
+export const gamesBackRowHeight = 18; // 18 20 (24 2) 32/2
 export const breakPoint = 750;
 export const upperClip = 24;
 export const lowerClip = -24;
